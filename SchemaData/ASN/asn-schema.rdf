@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdfns 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfsns 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY owlns 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY dcns 'http://purl.org/dc/elements/1.1/'>
+	<!ENTITY dctermsns 'http://purl.org/dc/terms/'>
+	<!ENTITY asnns 'http://purl.org/ASN/schema/core/'>
+	<!ENTITY locns 'http://www.loc.gov/loc.terms/relators/'>
+]>
+<rdf:RDF xmlns:asn="http://purl.org/ASN/schema/core/" 
+         xmlns:dc="http://purl.org/dc/elements/1.1/" 
+         xmlns:dcterms="http://purl.org/dc/terms/" 
+         xmlns:loc="http://www.loc.gov/loc.terms/relators/" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl ="http://www.w3.org/2002/07/owl#">
+
+	<!-- ====================================================== -->
+    <!-- BEGIN SCHEMA DESCRIPTION                                -->
+	<!-- ====================================================== -->         
+	<rdf:Description rdf:about="http://purl.org/ASN/schema/core/">
+		<dc:title xml:lang="en-US">The Achievement Standards Network Core Properties</dc:title>
+		<dc:publisher xml:lang="en-US">JES and Co.</dc:publisher>
+		<dc:description xml:lang="en-US">The Achievement Standards Network Core namespace provides URIs for many of the terms used in ASN metadata instances. Custom ASN application profiles can be achieved through use of properties and classes from other RDF schemas and ontologies. Vocabulary terms are declared using RDF Schema language to support RDF applications.</dc:description>
+		<dc:language xml:lang="en-US">English</dc:language>
+		<dcterms:issued rdf:datatype="dcterms:W3CDTF">2004-04-29</dcterms:issued>
+		<dcterms:modified rdf:datatype="dcterms:W3CDTF">2013-06-28</dcterms:modified>
+	</rdf:Description>
+	<!-- ====================================================== -->
+	<!-- END SCHEMA DESCRIPTIONN -->
+  	<!-- ====================================================== -->
+  	
+  	<!-- ====================================================== -->
+	<!-- BEGIN PROPERTY DEFINITIONS FOR DOCUMENTS               --> 
+	<!-- AND STATEMENTS                                         -->
+	<!-- ====================================================== -->
+	<!-- Definition of alignedFrom                              -->
+	<rdf:Property rdf:about="&asnns;alignFrom">
+		<rdfs:label>align from</rdfs:label>
+		<rdfs:comment>A standards document or statement from which the statement or document being described is aligned.</rdfs:comment>
+		<dc:description xml:lang="en-US"> An alignment is an assertion of some degree of eqiuvalency between the subject and the object of the assertion.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of alignedTo -->
+	<rdf:Property rdf:about="&asnns;alignTo">
+		<rdfs:label>align to</rdfs:label>
+		<rdfs:comment>A standards document or statement to which the statement or document being described is aligned.</rdfs:comment>
+		<dc:description xml:lang="en-US"> An alignment is an assertion of some degree of eqiuvalency between the subject and the object of the assertion.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of altStatementNotation -->
+	<!-- Added December 3, 2012 -->
+	<rdf:Property rdf:about="&asnns;altStatementNotation">
+		<rdfs:label>Alternative Statement Notation</rdfs:label>
+		<rdfs:comment>An alphanumeric notation or ID code identifying the statement in common use among end-users.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;identifer"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of authorityStatus -->
+	<!-- Modified November 14, 2007 -->
+	<rdf:Property rdf:about="&asnns;authorityStatus">
+		<rdfs:label>Authority Status</rdfs:label>
+		<rdfs:comment>The status of a standards statement denoting whether the statement owes its origin to the promulgating agency of the standards document of which the statement is a member (i.e., value "Original") or to some 3rd party (i.e., "Derived").</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of comment -->
+	<rdf:Property rdf:about="&asnns;comment">
+		<rdfs:label>comment</rdfs:label>
+		<rdfs:comment>Supplemental text provided by the promulgating body that clarifies the nature, scope or use of the statement being described.</rdfs:comment>
+		<dc:description xml:lang="en-US"> Use comment when the text provides useful context for the statement.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of conceptKeyword-->
+	<!-- Added 2009-09-01  -->
+	<rdf:Property rdf:about="&asnns;conceptKeyword">
+		<rdfs:label>Concept Keyword</rdfs:label>
+		<rdfs:comment>A word or phrase used by the promulgating agency to refine and differentiate individual statements contextually.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;subject"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of conceptTerm-->
+	<!-- Modified November 11, 2006 -->
+	<rdf:Property rdf:about="&asnns;conceptTerm">
+		<rdfs:label>Concept Term</rdfs:label>
+		<rdfs:comment>A term from a controlled vocabulary used by the promulgating agency to refine and differentiate individual statements contextually.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;subject"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of crossSubjectReference -->
+	<!-- Added June 11, 2009 -->
+	<rdf:Property rdf:about="&asnns;crossSubjectReference">
+		<rdfs:label>Cross-subject Reference</rdfs:label>
+		<rdfs:comment>An explicit reference by the promulgating agency establishing a relationship between the statement being described and statement in a separate subject standards document (interdisciplinary statement references).</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;references"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of derivedFrom -->
+	<rdf:Property rdf:about="&asnns;derivedFrom">
+		<rdfs:label>Derived From</rdfs:label>
+		<rdfs:comment>The URI of a statement from which the derived statement being described has been derived.</rdfs:comment>
+		<dc:description xml:lang="en-US">The derivedFrom property is used by 3rd parties only in derived statements and must appear in conjunction with a value of "Derived" in the statement's authorityStatus property.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of exportVersion -->
+	<rdf:Property rdf:about="&asnns;exportVersion">
+		<rdfs:label>Export Version</rdfs:label>
+		<rdfs:comment>The URI of the export version of the standards file.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of indexingStatus -->
+	<!-- Modified November 14, 2007 -->
+	<rdf:Property rdf:about="&asnns;indexingStatus">
+		<rdfs:label>Indexing Status</rdfs:label>
+		<rdfs:comment>The status of the statement denoting whether correlators should or should not assign the statement during correlation--Values="Yes"/"No".</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of ASN identifier -->
+	<!-- Added 2011-07-16 -->
+	<rdf:Property rdf:about="&asnns;identifier">
+		<rdfs:label>Alternative Identifier</rdfs:label>
+		<rdfs:comment>An alternative URI by which the resource is identified.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;identifier"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of jurisdiction -->
+	<!-- Modified June 19, 2005-->
+	<rdf:Property rdf:about="&asnns;jurisdiction">
+		<rdfs:label>Jurisdiction</rdfs:label>
+		<rdfs:comment>The jurisdiction or domain of the standard's application--e.g., California, Nebraska, etc.</rdfs:comment>
+		<dc:description xml:lang="en-US">The URI of the jurisdiction from the ASNJurisdiction controlled vocabulary.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of listID-->
+	<!-- Added November 29, 2012 -->
+	<rdf:Property rdf:about="&asnns;listID">
+		<rdfs:label>List ID</rdfs:label>
+		<rdfs:comment>A set of one or more alphanumeric characters and/or symbols denoting the positioning of the statement being described in a sequential listing of statements.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;identifer"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of localSubject -->
+	<!-- Added November 11, 2006 -->
+	<!-- Modified November 14, 2007 -->
+	<rdf:Property rdf:about="&asnns;localSubject">
+		<rdfs:label>Local Subject</rdfs:label>
+		<rdfs:comment>The text string denoting the subject of the statement as designated by the promulgating agency.  This subject may be different from the asn:subject used for subject classification within the ASN.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;subject"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of publicationStatus -->
+	<!-- Added November 14, 2007 -->
+	<rdf:Property rdf:about="&asnns;publicationStatus">
+		<rdfs:label>Publication Status</rdfs:label>
+		<rdfs:comment>The publication status of the of the standards document--e.g., Draft, Published, Deprecated.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of repositoryDate -->
+	<!-- Revised June 19, 2005 -->
+	<rdf:Property rdf:about="&asnns;repositoryDate">
+		<rdfs:label>Repository Date</rdfs:label>
+		<rdfs:comment>The date the standards document was added to the repository.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;date"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of skillEmbodied -->
+	<!-- Added June 11, 2009 -->
+	<rdf:Property rdf:about="&asnns;skillEmbodied">
+		<rdfs:label>Skill Embodied</rdfs:label>
+		<rdfs:comment>Cognitive, affective, psychomotor or other skill directly or indirectly embodied in the statement.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of statementLabel -->
+	<!-- Revised July 12, 2005 -->
+	<rdf:Property rdf:about="&asnns;statementLabel">
+		<rdfs:label>Statement Label</rdfs:label>
+		<rdfs:comment>The textual label designating the class of statement in the structure of statements in the Standard Document--e.g., Standard, Benchmark, Strand, Topic, etc.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of statementNotation-->
+	<!-- Revised June 19, 2005 -->
+	<rdf:Property rdf:about="&asnns;statementNotation">
+		<rdfs:label>Statement Notation</rdfs:label>
+		<rdfs:comment>An alphanumeric identifier of a Statement as defined by the promulgating agency.  Statement notation must be unique within the defining organization's namespace.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;identifer"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- ====================================================== -->
+	<!-- END PROPERTY DEFINITIONS FOR DOCUMENTS AND STATEMENTS  -->
+	<!-- ====================================================== -->
+	
+	<!-- ====================================================== -->
+	<!-- BEGIN PROPERTY DEFINITIONS FOR MAPPING PREDICATES      -->
+	<!-- FOR LEARNING RESOURCES                                 -->
+	<!-- NOTE:  The following mapping predicates are all        -->
+	<!--        defined as subproperties of dcterms:conformsTo  -->
+	<!-- ====================================================== -->	
+	<!-- Definition of assessesCompetency -->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;assessesCompetency">
+		<rdfs:label>Assesses Competency</rdfs:label>
+		<rdfs:comment>The competency that the learning resource being described assesses.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- Definition of broadCorrelation-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;broadCorrelation">
+		<rdfs:label>Broad Correlation</rdfs:label>
+		<rdfs:comment>The competency covers all of the relevant concepts in the learning resource being described as well as relevant concepts not found in the learning resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- Definition of exactCorrelation-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;exactCorrelation">
+		<rdfs:label>Exact Correlation</rdfs:label>
+		<rdfs:comment>The relevant concepts in the educational resource and the standard statement are coextensive.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- Definition of majorCorrelation-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;majorCorrelation">
+		<rdfs:label>Major Correlation</rdfs:label>
+		<rdfs:comment>Major overlap of relevant concepts between the learning resource being described and the competency statement.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	 
+	<!-- Definition of minorCorrelation-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;minorCorrelation">
+		<rdfs:label>Minor Correlation</rdfs:label>
+		<rdfs:comment>Minor overlap of relevant concepts between the learning resource being described and the competency statement.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of narrowCorrelation-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;narrowCorrelation">
+		<rdfs:label>Narrow Correlation</rdfs:label>
+		<rdfs:comment>The learning resource being described covers all of the relevant concepts in the competency statement as well as relevant concepts not found in the competency.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of prerequisiteCompetency-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;prerequisiteCompetency">
+		<rdfs:label>Prerequisite Competency</rdfs:label>
+		<rdfs:comment>A prerequisite competency for the learning resource being described.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of teachesCompetency-->
+	<!-- Added April 13, 2012 -->
+	<rdf:Property rdf:about="&asnns;teachesCompetency">
+		<rdfs:label>Teaches Competency</rdfs:label>
+		<rdfs:comment>The competency that the learning resource being described teaches.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;LearningResource" />
+		<rdfs:range rdf:resource="&asnns;Statement" />
+		<rdfs:subPropertyOf rdf:resource="&dctermsns;conformsTo"/>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- ====================================================== -->
+	<!-- END PROPERTY DEFINITIONS FOR MAPPING PREDICATES        -->
+	<!-- FOR LEARNING RESOURCES AND CORRELATION RESOURCES       -->
+	<!-- ====================================================== -->
+	
+		<!-- ================================================== -->
+	<!-- BEGIN PROPERTY DEFINITIONS FOR MAPPING PREDICATES      -->
+	<!-- FOR STANDARDS TO STANDARD ALIGNMENTS                   -->
+	<!-- NOTE:  The following mapping predicates are all        -->
+	<!--        defined as subproperties of dcterms:conformsTo  -->
+	<!-- ====================================================== -->	
+	<!-- Definition of broadAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;broadAlignment">
+		<rdfs:label>Broad Alignment</rdfs:label>
+		<rdfs:comment>The target competency covers all of the relevant concepts in the competency being described as well as relevant concepts not found in the competency being described.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of comprisedOf-->
+	<!-- Added June 28, 2013 -->
+	<rdf:Property rdf:about="&asnns;comprisedOf">
+		<rdfs:label>Comprised Of</rdfs:label>
+		<dc:description xml:lang="en-US">The resource being described includes, comprehends or encompass, in whole or in part, the meaning, nature or importance of the resource being referenced.</dc:description>
+		<rdfs:comment>Deliberately not defining domains and ranges for the property at this time.</rdfs:comment>		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- Definition of exactAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;exactAlignment">
+		<rdfs:label>Exact Alignment</rdfs:label>
+		<rdfs:comment>The relevant concepts in both competencies are coextensive.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	
+	<!-- Definition of majorAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;majorAlignment">
+		<rdfs:label>Major Alignment</rdfs:label>
+		<rdfs:comment>Major overlap of relevant concepts between the two competencies.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>	 
+	<!-- Definition of minorAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;minorAlignment">
+		<rdfs:label>Minor Alignment</rdfs:label>
+		<rdfs:comment>Minor overlap of relevant concepts between the two competencies.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of narrowAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;narrowAlignment">
+		<rdfs:label>Narrow Alignment</rdfs:label>
+		<rdfs:comment>The competency being described covers all of the relevant concepts in the target competency as well as relevant concepts not found in the target competency.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />		
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- Definition of prerequisiteAlignment-->
+	<!-- Added October 17, 2012 -->
+	<rdf:Property rdf:about="&asnns;prerequisiteAlignment">
+		<rdfs:label>Prerequisite Alignment</rdfs:label>
+		<rdfs:comment>The competency being described is a prerequisite to the target competency.</rdfs:comment>
+		<rdfs:domain rdf:resource="&asnns;Statement" />
+		<rdfs:range rdf:resource="&asnns;Statement" />
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdf:Property>
+	<!-- ====================================================== -->
+	<!-- END PROPERTY DEFINITIONS FOR MAPPING PREDICATES        -->
+	<!-- FOR STATEMENTS AND CORRELATION RESOURCES               -->
+	<!-- ====================================================== -->
+	
+	<!-- ====================================================== -->	 
+	<!-- BEGIN CLASS DEFINITIONS                                -->
+	<!-- ====================================================== -->	
+	<!-- Definition of CorrelationResource                      -->
+	<!-- Added April 13, 2012                                   -->
+	<rdfs:Class rdf:about="&asnns;CorrelationResource">
+		<rdfs:label xml:lang="en-US">Correlation Resource</rdfs:label>
+		<rdfs:comment xml:lang="en-US">A resource that describes the mapping between a learning resource and a node in a learning outcomes framework.</rdfs:comment>
+		<dc:description>The CorrelationResource is an entity intended to provide a rich description of a mapping (correlation) between a LearningResource and a Statement when a binary assertion of a relationship is insufficient.</dc:description>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&asnns;JurisdictionScheme">
+		<rdfs:label xml:lang="en-US">Jurisdiction Encoding Schemes</rdfs:label>
+		<rdfs:comment xml:lang="en-US">Controlled vocabularies of terms denoting the juristiction or domain of the standards document.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&asnns;LearningResource">
+		<rdfs:label xml:lang="en-US">Learning Resource</rdfs:label>
+		<rdfs:comment xml:lang="en-US">A resource that is used as part of an Educational Activity (e.g. a textbook) or that describes (e.g. a lesson plan) or records the Educational Activity (e.g. an audio- or video-recording of a lesson).</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&asnns;StatusScheme">
+		<rdfs:label xml:lang="en-US">Status Encoding Schemes</rdfs:label>
+		<rdfs:comment xml:lang="en-US">Controlled vocabularies of terms denoting the publication status of the standards document.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&asnns;StandardDocument">
+		<rdfs:label xml:lang="en-US">Standard Document</rdfs:label>
+		<rdfs:comment xml:lang="en-US">A collection of statements representing an expectation of what students should know, value, and be able to do at a target age or age range.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+		<rdfs:Class rdf:about="&asnns;DerivedStandardDocument">
+		<rdfs:label xml:lang="en-US">Derived Standard Document</rdfs:label>
+		<rdfs:comment xml:lang="en-US">A collection of statements representing an expectation of what students should know, value, and be able to do at a target age or age range that are substantially defined by a different jurisdiction.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+		<rdfs:subClassOf rdf:resource="&asnns;StandardDocument" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&asnns;Statement">
+		<rdfs:label xml:lang="en-US">Statement</rdfs:label>
+		<rdfs:comment xml:lang="en-US">An assertion representing an expectation of what students should know, value, and be able to do at a target age or age range.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+	</rdfs:Class>
+		<rdfs:Class rdf:about="&asnns;DerivedStatement">
+		<rdfs:label xml:lang="en-US">Derived Statement</rdfs:label>
+		<rdfs:comment xml:lang="en-US">An assertion representing an expectation of what students should know, value, and be able to do at a target age or age range that is derived from a statement defined by a different jurisdiction.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&asnns;"/>
+		<rdfs:subClassOf rdf:resource="&asnns;Statement" />
+	</rdfs:Class>
+	<!-- ====================================================== -->	
+	<!-- END CLASS DEFINITIONS                                  -->
+	<!-- ====================================================== -->
+</rdf:RDF>

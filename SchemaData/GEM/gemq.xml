@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdfns 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfsns 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY dcns 'http://purl.org/dc/elements/1.1/'>
+	<!ENTITY dcqns 'http://purl.org/dc/terms/'>
+	<!ENTITY eorns 'http://dublincore.org/2000/03/13/eor#'>
+	<!ENTITY dctypens 'http://purl.org/dc/dcmitype/'>
+	<!ENTITY gemns 'http://purl.org/gem/elements/'>
+	<!ENTITY gemqns 'http://purl.org/gem/qualifiers/'>
+	<!ENTITY z3919ns 'http://gemstar.ischool.washington.edu/schema/2001/04/11/NISO-Z3919'>
+	<!ENTITY gnstand 'http://purl.org/gem/GenericStandard/'>
+]>
+<rdf:RDF xmlns:rdf="&rdfns;" xmlns:rdfs="&rdfsns;" xmlns:dc="&dcns;" xmlns:dcq="&dcqns;" xmlns:dctype="&dctypens;" xmlns:gem="&gemns;" xmlns:gnstand="&gnstand;">
+	<!-- xmlns:dced="http://dublincore.org/2000/10/05/education-namespace">     -->
+	<!-- Description of this Schema -->
+	<rdf:Description rdf:about="&gemqns;">
+		<dc:title>The GEM Element Set Qualifier Vocabulary v2.0</dc:title>
+		<dc:publisher>The GEM Consortium</dc:publisher>
+		<dc:description>The GEM Element Set Qualifier Vocabulary is intended to facilitate more precise description of learning objects for purposes of discovery and retrieval than is possible with unqualified GEM.
+  </dc:description>
+		<dc:language>English</dc:language>
+		<dc:date>2001-03-16</dc:date>
+	    <dcq:modified>2017-10-04</dcq:modified>	    
+	</rdf:Description>
+	<rdfs:Class rdf:about="&gemqns;GEM2">
+		<rdfs:label>GEM2 Record</rdfs:label>
+		<rdfs:comment>Use of this class signifies the resource is a gem2 record 
+  </rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- Begin: Subject  -->
+	<!-- Subject refinement declaration -->
+	<rdf:Property rdf:about="&gemqns;keywords">
+		<rdfs:label>Keywords</rdfs:label>
+		<rdfs:comment>Entry of key terms or phrases drawn from the text of the resource</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;subject"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;GEM-S">
+		<rdfs:label>GEM Subject</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Subject 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;SubjectScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;ERIC">
+		<rdfs:label>ERIC Thesaurus</rdfs:label>
+		<rdfs:comment>Instances of this class are Eric Thesaurus terms
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;SubjectScheme"/>
+		<rdf:type rdf:resource="&z3919ns;#NISO-Z3919"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;NASA">
+		<rdfs:label>NASA Thesaurus</rdfs:label>
+		<rdfs:comment>Instances of this class are NASA Thesaurus terms
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;SubjectScheme"/>
+		<rdf:type rdf:resource="&z3919ns;#NISO-Z3919"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;ATED">
+		<rdfs:label>ATED Thesaurus</rdfs:label>
+		<rdfs:comment>Instances of this class are ATED Thesaurus terms
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;SubjectScheme"/>
+		<rdf:type rdf:resource="&z3919ns;#NISO-Z3919"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;Southwest">
+		<rdfs:label>Southwest Thesaurus</rdfs:label>
+		<rdfs:comment>The Southwest Thesaurus consists of terms and concepts related to the Southwestern region of the United States. Created by University of Arizona.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;SubjectScheme"/>
+		<rdf:type rdf:resource="&z3919ns;#NISO-Z3919"/>
+		<rdf:type rdf:resource="http://www.fcii.arizona.edu/dlearn/gem/southwestThesaurus"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+		<rdfs:seeAlso rdf:resource="http://www.swt.arizona.edu"/>
+	</rdfs:Class>
+	<!-- End: Subject -->
+	<!-- Begin: Date -->
+	<!-- Date refinement declaration -->
+	<rdf:Property rdf:about="&gemqns;placedOnline">
+		<rdfs:label>placedOnline</rdfs:label>
+		<rdfs:comment>Date that the resource was placed online</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;date"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;recordCreated">
+		<rdfs:label>recordCreated</rdfs:label>
+		<rdfs:comment>The date the metadata record for the resource was created.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;date"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- End: Date -->
+	<!-- Begin: format -->
+	<!-- format refinement declarations -->
+	<rdf:Property rdf:about="&gemqns;size">
+		<rdfs:label>Size</rdfs:label>
+		<rdfs:comment>The size or duration of the resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcqns;extent"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;platform">
+		<rdfs:label>Platform</rdfs:label>
+		<rdfs:comment>Computing platform of the content. </rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;format"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- End: format -->
+	<!-- Begin: Relation -->
+	<rdf:Property rdf:about="&gemqns;hasBibliographicInfoIn">
+		<rdfs:label>Bibliographic Information</rdfs:label>
+		<rdfs:comment>The resource being pointed to by this relation provides bibliographic information for the main resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isAgencyReview">
+		<rdfs:label>Agency Review</rdfs:label>
+		<rdfs:comment>The resource being pointed to is an agency review of the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isChildOf">
+		<rdfs:label>Child Of</rdfs:label>
+		<rdfs:comment>The resource being described is lower in some arbitrary hierarchy than the resource being pointed to by this Relation element.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+	    <rdfs:subPropertyOf rdf:resource="&dcns;isPartOf"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;hasChild">
+		<rdfs:label>Has Child</rdfs:label>
+		<rdfs:comment>The resource being described is higher in some arbitrary hierarchy than the resource being pointed to by this Relation element.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+	    <rdfs:subPropertyOf rdf:resource="&dcns;hasPart"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+    <rdf:Property rdf:about="&gemqns;hasSibling">
+        <rdfs:label>Has Sibling</rdfs:label>
+        <rdfs:comment>The resource being described is at the same level in some arbitrary hierarchy and precedes in sequence the resource describedt.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+        <rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+    </rdf:Property>    
+	<rdf:Property rdf:about="&gemqns;isContentRatingFor">
+		<rdfs:label>Content Rating</rdfs:label>
+		<rdfs:comment>The resource pointed to is a set of content ratings for the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isCriticalReviewOf">
+		<rdfs:label>Critical Review</rdfs:label>
+		<rdfs:comment>The resource being pointed to provides a review of the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isDataFor">
+		<rdfs:label>Data</rdfs:label>
+		<rdfs:comment>Provides data set or programs for another resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isDerivedFrom">
+		<rdfs:label>Source</rdfs:label>
+		<rdfs:comment>The resource being described by this set of Dublin Core metadata is derived from the resource being pointed to by this Relation element.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isOrderInfoFor">
+		<rdfs:label>Order Information</rdfs:label>
+		<rdfs:comment>The resource being pointed to by this relation contains ordering information for the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isOverviewOf">
+		<rdfs:label>Overview</rdfs:label>
+		<rdfs:comment>The resource being described by the Dublin Core metadata is overviewed in the resource pointed to by this relation.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isParentOf">
+		<rdfs:label>Parent</rdfs:label>
+		<rdfs:comment>The resource being described is higher in some arbitrary hierarchy than the resource being pointed to by this Relation element.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isPeerReview">
+		<rdfs:label>Peer Review</rdfs:label>
+		<rdfs:comment>The resource being pointed to is a peer review or set of peer reviews of the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isQualityScore">
+		<rdfs:label>Quality Score</rdfs:label>
+		<rdfs:comment>The cumulative score resulting from user feedback indicating the quality of the work for its intended purpose.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isRevisionHistoryFor">
+		<rdfs:label>Revision History</rdfs:label>
+		<rdfs:comment>The resource being pointed to by this relation provides a history of revisions made to the main resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isSiblingOf">
+		<rdfs:label>Has Sibling</rdfs:label>
+		<rdfs:comment>The resource being described is at the same level in some arbitrary hierarchy and subsequent in order to the resource being referenced.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	<rdf:Property rdf:about="&gemqns;isSiteCriteria">
+		<rdfs:label>Selection Criteria</rdfs:label>
+		<rdfs:comment>The resource being pointed to is the site criteria used in selecting the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="&gemqns;isSourceOf">
+		<rdfs:label>Source</rdfs:label>
+		<rdfs:comment>The resource being pointed to is the published source that the resource being cataloged is extracted or excerpted from.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;isSponsoredBy">
+		<rdfs:label>Sponsor</rdfs:label>
+		<rdfs:comment>The entity piinted to provides financial support to the entity being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	
+	<rdf:Property rdf:about="&gemqns;isStandardsMappingOf">
+		<rdfs:label>Standards Mapping</rdfs:label>
+		<rdfs:comment>Designation of the mapping of the work to local, state or national educational standards.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	<rdf:Property rdf:about="&gemqns;isUserReview">
+		<rdfs:label>User Review</rdfs:label>
+		<rdfs:comment>The resource being pointed to by this relation is a user review or set of user reviews of the resource being described.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;relation"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- End: Relation -->
+	
+	
+	
+	
+	<!-- Begin: Identifier -->
+	<!-- Identifier refinement declarations -->
+	<rdf:Property rdf:about="&gemqns;publicID">
+		<rdfs:label>public ID</rdfs:label>
+		<rdfs:comment>Any publicly recognized designation that serves to uniquely identify the resource (e.g., ISBN, ISSN, etc.). </rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;identifier"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	<rdf:Property rdf:about="&gemqns;SID">
+		<rdfs:label>SID</rdfs:label>
+		<rdfs:comment>A unique identifier assigned by the GEM Consortium to a collection of resources in The Gateway.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;identifier"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	<rdf:Property rdf:about="&gemqns;SDN">
+		<rdfs:label>SDN</rdfs:label>
+		<rdfs:comment>A Consortium member's unique identifier for a specific resource in the Consortium member's collection.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;identifier"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	
+	<!-- Encoding Schemes -->
+	<rdfs:Class rdf:about="&gemqns;PublicIDScheme">
+		<rdfs:label>Public ID Schemes</rdfs:label>
+		<rdfs:comment>A set of pulblic ID schemes</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;publicID"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;SIDScheme">
+		<rdfs:label>SID Encoding Schemes</rdfs:label>
+		<rdfs:comment>A unique identifier for GEM records</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;SID"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEMsid">
+		<rdfs:label>GEM SID</rdfs:label>
+		<rdfs:comment>A unique identifier assigned by the GEM Consortium to a collection of resources in The Gateway.</rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;SIDScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;ISBN">
+		<rdfs:label>ISBN</rdfs:label>
+		<rdfs:comment>International Standard Book Number System for Books, Software, Mixed Media etc. in Publishing, Distribution and Library Practices
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PublicIDScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;ISSN">
+		<rdfs:label>ISSN</rdfs:label>
+		<rdfs:comment>International Standard Serial Number 
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PublicIDScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Identifier -->
+	<!-- Begin: Creator -->
+	<rdfs:Class rdf:about="&gemqns;CreatorScheme">
+		<rdfs:label>Creator Schemes</rdfs:label>
+		<rdfs:comment>A set of creator encoding schemes and/or formats</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+		<dcq:references rdf:resource="&dcns;creator"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;Gem-Vcard">
+		<rdfs:label>GEM Vcard</rdfs:label>
+		<rdfs:comment>Instances of this class are Vcard and Gem name properties
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;CreatorScheme"/>
+		<rdf:type rdf:resource="&gemqns;ContributorScheme"/>
+		<rdf:type rdf:resource="&gemqns;PublisherScheme"/>
+		<rdf:type rdf:resource="&gemqns;CatalogingScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Creator -->
+	<!-- Begin: Contributor -->
+	<rdfs:Class rdf:about="&gemqns;ContributorScheme">
+		<rdfs:label>Contributor Schemes</rdfs:label>
+		<rdfs:comment>A set of Contributor encoding schemes and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&dcns;contributor"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- MARC Relator terms -->
+	<rdf:Property rdf:about="&gemqns;MARC_Artist">
+		<rdfs:label>Artist</rdfs:label>
+		<rdf:value>art</rdf:value>
+		<rdfs:comment>Use for a person (e.g., a painter) or organization who conceives, and perhaps also implements, an original graphic design or work of art, if specific codes (e.g., [egr], [etr]) are not desired. For book illustrators, prefer Illustrator [ill].
+		</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Annotator">
+		<rdfs:label>Annotator</rdfs:label>
+		<rdf:value>ann</rdf:value>
+		<rdfs:comment>Use for a person who writes manuscript annotations on a printed item.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Author">
+		<rdfs:label>Author</rdfs:label>
+		<rdf:value>aut</rdf:value>
+		<rdfs:comment>Use for a person or organization chiefly responsible for the intellectual or artistic content of a work, usually printed text. This term may also be used when more than one person or body bears such responsibility</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+<rdf:Property rdf:about="&gemqns;MARC_Creator">
+		<rdfs:label>Author</rdfs:label>
+		<rdf:value>aut</rdf:value>
+		<rdfs:comment>Use for a person or organization chiefly responsible for the intellectual or artistic content of a work, usually printed text. This term may also be used when more than one person or body bears such responsibility</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Cartographer">
+		<rdfs:label>Cartographer</rdfs:label>
+		<rdf:value>cll</rdf:value>
+		<rdfs:comment>Use for a person or organization who writes in an artistic hand, usually as a copyist and or engrosser.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Collaborator">
+		<rdfs:label>Collaborator</rdfs:label>
+		<rdfs:comment>Use for a person or organization that takes a limited part in the elaboration of a work of another person or organization that brings complements (e.g., appendices, notes) to the work.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Composer">
+		<rdfs:label>Composer</rdfs:label>
+		<rdf:value>cmt</rdf:value>
+		<rdfs:comment>Use for a person or organization who creates a musical work, usually a piece of music in manuscript or printed form.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Editor">
+		<rdfs:label>Editor</rdfs:label>
+		<rdf:value>edt</rdf:value>
+		<rdfs:comment>Use for a person or organization who prepares for publication a work not primarily his/her own, such as by elucidating text, adding introductory or other critical matter, or technically directing an editorial staff.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Illustrator">
+		<rdfs:label>Illustrator</rdfs:label>
+		<rdf:value>ill</rdf:value>
+		<rdfs:comment>Use for a person or organization responsible for the decoration of a work (especially manuscript material) with precious metals or color, usually with elaborate designs and motifs.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Interviewee">
+		<rdfs:label>Interviewee</rdfs:label>
+		<rdf:value>ive</rdf:value>
+		<rdfs:comment>Use for a person or organization who is interviewed at a consultation or meeting, usually by a reporter, pollster, or some other information gathering agent.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Interviewer">
+		<rdfs:label>Interviewer</rdfs:label>
+		<rdf:value>ivr</rdf:value>
+		<rdfs:comment>Use for a person or organization who acts as a reporter, pollster, or other information gathering agent in a consultation or meeting involving one or more individuals.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Narrator">
+		<rdfs:label>Narrator</rdfs:label>
+		<rdf:value>nrt</rdf:value>
+		<rdfs:comment>Use for a person who is a speaker relating the particulars of an act, occurrence, or course of events.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Photographer">
+		<rdfs:label>Photographer</rdfs:label>
+		<rdf:value>pht</rdf:value>
+		<rdfs:comment>Use for a person or organization responsible for taking photographs, whether they are used in their original form or as reproductions.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Reviewer">
+		<rdfs:label>Reviewer</rdfs:label>
+		<rdf:value>rev</rdf:value>
+		<rdfs:comment>Use for a person or organization responsible for the review of a book, motion picture, performance, etc.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;MARC_Sponsor">
+		<rdfs:label>Sponsor</rdfs:label>
+		<rdf:value>spn</rdf:value>
+		<rdfs:comment>Use for a person or organization that issued a contract or under the auspices of which a work has been written, printed, published, etc.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;contributor"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- Begin: Publisher -->
+	<rdf:Property rdf:about="&gemqns;OnlineProvider">
+		<rdfs:label>Online Provider</rdfs:label>
+		<rdfs:comment/>
+		<rdfs:subPropertyOf rdf:resource="&dcns;publisher"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- End: Publisher -->
+	<!-- Begin: Cataloging -->
+	<rdf:Property rdf:about="&gemqns;CatalogingOrganization">
+		<rdfs:label>Cataloging Organization</rdfs:label>
+		<rdfs:comment/>
+		<rdfs:subPropertyOf rdf:resource="&gemns;cataloging"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;IndividualCataloger">
+		<rdfs:label>Individual Cataloger</rdfs:label>
+		<rdfs:comment/>
+		<rdfs:subPropertyOf rdf:resource="&gemns;cataloging"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;CatalogingTool">
+		<rdfs:label>Cataloging Tool</rdfs:label>
+		<rdfs:comment/>
+		<rdfs:subPropertyOf rdf:resource="&gemns;cataloging"/>
+		<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/relators/relaterm.html"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- End: Cataloging -->
+	<!-- Begin: Rights -->
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;PriceCodeScheme">
+		<rdfs:label>price code Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of price code encoding schemes 
+  and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;priceCode"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEMpriceCode">
+		<rdfs:label>GEM price code</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM price code
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdfs:subClassOf rdf:resource="&gemqns;PriceCodeScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;RightsScheme">
+		<rdfs:label>Rights Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of Rights encoding schemes 
+  and/or formats</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+		<dcq:references rdf:resource="&dcns;rights"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&dcqns;URI">
+		<rdf:type rdf:resource="&gemqns;RightsScheme"/>
+	</rdfs:Class>
+	<!-- Rights: refinement declarations -->
+	<rdf:Property rdf:about="&gemqns;priceCode">
+		<rdfs:label>Price Code</rdfs:label>
+		<rdfs:comment>A code designating the fee status of the resource (e.g., free, partially free, not free).</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcns;rights"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	
+	
+	<!-- Begin: Competency -->
+	<!-- Competency: refinement declarations -->
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;CompetencyScheme">
+		<rdfs:label>Competency Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of competency encoding schemes 
+  and/or formats</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Competency -->
+	<!-- Begin: Audience -->
+	<!--  Audience: refinement declarations -->
+	<rdf:Property rdf:about="&gemqns;beneficiary">
+		<rdfs:label>Beneficiary</rdfs:label>
+		<rdfs:comment>The target audience of the resource (e.g., learning disabled students).</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcqns;audience"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	
+	
+	
+	<rdf:Property rdf:about="&gemqns;age">
+		<rdfs:label>Age</rdfs:label>
+		<rdfs:comment>Where the resource targets a specific age or age range</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcqns;audience"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;prerequisites">
+		<rdfs:label>Prerequisites</rdfs:label>
+		<rdfs:comment>The designation of a learning prequisites.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&dcqns;audience"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;AudienceBeneficiaryScheme">
+		<rdfs:label>Beneficiary Encoding Schemes</rdfs:label>
+		<rdfs:comment> set of Audience Beneficiary encoding schemes 
+  and/or formats
+  </rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;beneficiary"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;AudienceMediatorScheme">
+		<rdfs:label>Mediator Encoding Schemes</rdfs:label>
+		<rdfs:comment> set of Audience Mediator encoding schemes 
+  and/or formats
+  </rdfs:comment>
+		<dcq:references rdf:resource="&dcqns;mediator"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;AudienceLevelScheme">
+		<rdfs:label>Level Encoding Schemes</rdfs:label>
+		<rdfs:comment> set of Audience Level encoding schemes 
+  and/or formats
+  </rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;level"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-BEN">
+		<rdfs:label>GEM Beneficiary</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Audience Beneficiary 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;AudienceBeneficiaryScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-MED">
+		<rdfs:label>GEM Mediator</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Audience Mediator 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;AudienceMediatorScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-LEVEL">
+		<rdfs:label>GEM Levels</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Audience Levels 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;AudienceLevelScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Audience -->
+	<!-- Begin: Pedagogy -->
+	<!-- Pedagogy: refinement declarations -->
+	<rdf:Property rdf:about="&gemqns;grouping">
+		<rdfs:label>Grouping</rdfs:label>
+		<rdfs:comment>The designation of the student grouping.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&gemns;pedagogy"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;teachingmethods">
+		<rdfs:label>Teaching Methods</rdfs:label>
+		<rdfs:comment>The designation for the teaching method.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&gemns;pedagogy"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="&gemqns;assessment">
+		<rdfs:label>Assessment</rdfs:label>
+		<rdfs:comment>The designation of the student assessment method.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="&gemns;pedagogy"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdf:Property>
+	<!-- Encoding Scheme declarations -->
+	
+	
+	
+	
+	<!--
+<rdfs:Class rdf:about="&gemqns;PedagogyScheme">
+  <rdfs:label>Pedagogy Encoding Schemes</rdfs:label>
+  <rdfs:comment>A set of pedagogy encoding schemes 
+  and/or formats</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource="&gemqns;" />
+</rdfs:Class>
+-->
+	<rdfs:Class rdf:about="&gemqns;PedagogyGroupingScheme">
+		<rdfs:label>Pedagogy - Grouping Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of pedagogy encoding schemes 
+  and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;grouping"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;PedagogyTeachingScheme">
+		<rdfs:label>Pedagogy - Teaching Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of pedagogy encoding schemes 
+  and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;teachingmethods"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;PedagogyAssessmentScheme">
+		<rdfs:label>Pedagogy - Assessment Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of pedagogy encoding schemes 
+  and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&gemqns;assessment"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-GRO">
+		<rdfs:label>GEM Grouping</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Pedagogy 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PedagogyGroupingScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-TM">
+		<rdfs:label>GEM Teaching Methods</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Pedagogy 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PedagogyTeachingScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GEM-AM">
+		<rdfs:label>GEM Assessment</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM Pedagogy 
+  Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PedagogyAssessmentScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!--mediaseek -->
+	<rdfs:Class rdf:about="&gemqns;MediaSeek-TM">
+		<rdfs:label>MediaSeek Teaching Methods</rdfs:label>
+		<rdfs:comment>Instances of this class are MediaSeek Pedagogy 
+  Classifications.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PedagogyTeachingScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;MediaSeek-GRO">
+		<rdfs:label>MediaSeek Grouping</rdfs:label>
+		<rdfs:comment>Instances of this class are MediaSeek Pedagogy 
+  Classifications.</rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;PedagogyGroupingScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Pedagogy -->
+	<!-- Start: Resources -->
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;ResourcesScheme">
+		<rdfs:label>Resources Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of Resources encoding schemes 
+  and/or formats</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Resources -->
+	<!-- Begin: type -->
+	<rdfs:Class rdf:about="&gemqns;GemType">
+		<rdfs:label>GEM Resource Types</rdfs:label>
+		<rdfs:comment>Instances of this class are GEM ResourcesType 
+  Classifications and must provide an rdf:value. 
+   </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;TypeScheme"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;MediaSeek-Type">
+		<rdfs:label>MediaSeek Resource Types</rdfs:label>
+		<rdfs:comment>Instances of this class are MediaSeek Resources Types 
+  Classifications.
+   </rdfs:comment>
+		<rdf:type rdf:resource="&dcqns;TypeScheme"/>
+	</rdfs:Class>
+	<!-- End: type -->
+	
+	
+	
+	
+	<!-- Begin: Standard -->
+	<!-- Encoding Scheme declarations -->
+	<rdfs:Class rdf:about="&gemqns;StandardsScheme">
+		<rdfs:label>Standards Encoding Schemes</rdfs:label>
+		<rdfs:comment>A set of standards encoding schemes and/or formats</rdfs:comment>
+		<dcq:references rdf:resource="&gemns;standard"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;SimpleStandard">
+		<rdfs:label>Simple Standard</rdfs:label>
+		<rdfs:comment>A simple standard that contains free text and a correlator
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;StandardsScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;GenericStandard">
+		<rdfs:label>Generic Standard</rdfs:label>
+		<rdfs:comment>Instances of this class are Standards Classifications and must provide an rdf:value.
+  </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;StandardsScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="&gemqns;Compendix">
+		<rdfs:label>Compendix</rdfs:label>
+		<rdfs:comment>Instances of this class are Compendix Standards Classifications </rdfs:comment>
+		<rdf:type rdf:resource="&gemqns;StandardsScheme"/>
+		<rdfs:isDefinedBy rdf:resource="&gemqns;"/>
+	</rdfs:Class>
+	<!-- End: Standard -->
+</rdf:RDF>
+

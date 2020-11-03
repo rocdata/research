@@ -1,0 +1,641 @@
+{
+  "Profile": {
+       "id": "asnUS:Profile",
+       "title": "ASN Profile: U.S. Competency Framework Schema",
+       "description": "An ASN profile for competency framework description as used by the ASN-US database",
+       "date": "2005-01-01",
+       "contact": "Joseph Chapman, Desire2Learn; Stuart Sutton, University of Washington",
+       "remark": "Partially developed through NSF funding.",
+       "resourceTemplates": [
+          {
+             "id": "asn:StandardDocument",
+             "resourceLabel": "Standard Document",
+             "resourceURI": "http://purl.org/ASN/schema/core/StandardDocument",
+             "propertyTemplates": [
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/alignFrom",
+                    "propertyLabel": "Aligned From",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:StandardDocument" 
+                            ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/alignTo",
+                    "propertyLabel": "Aligned To",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:StandardDocument" 
+                            ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://www.loc.gov/loc.terms/relators/AUT",
+                    "propertyLabel": "Author",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/dateCopyrighted",
+                    "propertyLabel": "Date Copyrighted",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueDataType": {
+                           "resourceURI": "http://www.w3.org/2001/XMLSchema#date",
+                           "valueLabel": "ISO 8601"
+                        }
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/dateValid",
+                    "propertyLabel": "Date Valid",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueDataType": {
+                           "resourceURI": "http://www.w3.org/2001/XMLSchema#date",
+                           "valueLabel": "ISO 8601"
+                        }
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/term/description",
+                    "propertyLabel": "Description",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "true",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/educationLevel",
+                    "propertyLabel": "Education Level",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "true",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://purl.org/ASN/scheme/ASNEducationLevel/"]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/gem/qualifiers/hasChild",
+                    "propertyLabel": "Has Child",
+                    "repeatable": "true",
+                    "mandatory": "true",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                    }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/identifier",
+                    "propertyLabel": "Identifier",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false"
+                 },                 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/jurisdiction",
+                    "propertyLabel": "Jurisdiction",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://purl.org/ASN/scheme/ASNJurisdiction/", 
+                            "http://id.loc.gov/vocabulary/countries/"]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/elements/1.1/language",
+                    "propertyLabel": "Language",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://id.loc.gov/vocabulary/iso639-1/" 
+                            ],
+                        "defaultURI": "http://id.loc.gov/vocabulary/iso639-1/en"    
+                    }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/license",
+                    "propertyLabel": "License",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "valueURIallowed": [
+                             "http://creativecommons.org/licenses/by/4.0/",
+                             "http://creativecommons.org/licenses/by-nc/4.0/",
+                             "http://creativecommons.org/licenses/by-nd/4.0/",
+                             "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+                             "http://creativecommons.org/licenses/by-sa/4.0/",
+                             "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+                             "http://creativecommons.org/publicdomain/zero/1.0/"
+                            ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/localSubject",
+                    "propertyLabel": "Local Subject",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://www.w3.org/2004/02/skos/core#note",
+                    "propertyLabel": "Note",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/publicationStatus",
+                    "propertyLabel": "Publication Status",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://purl.org/ASN/scheme/ASNPublicationStatus/"]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/elements/1.1/publisher",
+                    "propertyLabel": "Pubisher",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "false"
+                 },                 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/repositoryDate",
+                    "propertyLabel": "Repository Date",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "true",                    
+                    "valueConstraint": {
+                        "valueDataType": {
+                           "resourceURI": "http://www.w3.org/2001/XMLSchema#date",
+                           "valueLabel": "ISO 8601"
+                        }
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/rights",
+                    "propertyLabel": "Rights",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/rightsHolder",
+                    "propertyLabel": "Rights Holder",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "false"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/source",
+                    "propertyLabel": "Source",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "true"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/subject",
+                    "propertyLabel": "Subject",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://purl.org/ASN/scheme/ASNTopics/"]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/elements/1.1/title",
+                    "propertyLabel": "Title",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "true",
+                    "valueConstraint": {
+                        "valueLanguage": "en"}
+                 }                 
+             ]
+          },
+          {
+             "id": "http://purl.org/ASN/schema/core/Statement",
+             "resourceLabel": "Statement",
+             "resourceURI": "http://purl.org/ASN/schema/core/Statement",
+             "propertyTemplates": [
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/alignFrom",
+                    "propertyLabel": "Aligned From",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/alignto",
+                    "propertyLabel": "Aligned To",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "http://purl.org/ASN/schema/core/Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/altStatementNotation",
+                    "propertyLabel": "Alternate Statement Notation",
+                    "type": "literal",
+                    "repeatable": "false",
+                    "mandatory": "false"
+                 },                 
+                 {
+                    "propertyURI": "http://www.loc.gov/loc.terms/relators/AUT",
+                    "propertyLabel": "Author",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/authorityStatus",
+                    "propertyLabel": "Authority Status",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                             "http://purl.org/ASN/scheme/ASNAuthorityStatus/" 
+                        ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/broadAlignment",
+                    "propertyLabel": "Broad Alignment",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "http://purl.org/ASN/schema/core/Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/comment",
+                    "propertyLabel": "Comment",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/comprisedOf",
+                    "propertyLabel": "Comprised Of",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/conceptKeyword",
+                    "propertyLabel": "Concept Key Word",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/conceptTerm",
+                    "propertyLabel": "Concept Term",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "true",
+                        "mandatory": "false",
+                        "usesValuesFrom": [
+                             "http://vocabulary.curriculum.edu.au/scot/",
+                             "http://dbpedia.org/resource/",
+                             "https://www.freebase.com/",
+                             "http://id.loc.gov/authorities/subjects/",
+                             "http://id.loc.gov/authorities/names/",
+                             "http://viaf.org/viaf/",
+                             "http://vocab.getty.edu/tgn/",
+                             "http://vocab.getty.edu/att/",
+                             "http://vocab.getty.edu/ulan/"
+                        ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/crossSubjectReference",
+                    "propertyLabel": "Cross-Subject Reference",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/derivedFrom",
+                    "propertyLabel": "Derived From",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/term/description",
+                    "propertyLabel": "Description",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "true",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/educationLevel",
+                    "propertyLabel": "Education Level",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "true",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                             "http://purl.org/ASN/scheme/ASNEducationLevel/"
+                        ]
+                    }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/exactAlignment",
+                    "propertyLabel": "Exact Alignment",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://www.w3.org/2004/02/skos/core#exactMatch",
+                    "propertyLabel": "Has Exact Match",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "http://purl.org/ASN/schema/core/Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/gem/qualifiers/hasChild",
+                    "propertyLabel": "Has Child",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/indexingStatus",
+                    "propertyLabel": "Indexing Status",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "true",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                             "http://purl.org/ASN/scheme/ASNIndexingStatus/"
+                        ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/gem/qualifiers/isChildOf",
+                    "propertyLabel": "Is Child Of",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement",
+                            "asn:StandardSocument" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/gem/qualifiers/isChildOf",
+                    "propertyLabel": "Is Part Of",
+                    "repeatable": "true",
+                    "mandatory": "true",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:StandardDocument" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/isVersionOf",
+                    "propertyLabel": "Is Version Of",
+                    "repeatable": "false",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/elements/1.1/language",
+                    "propertyLabel": "Language",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://id.loc.gov/vocabulary/iso639-1/" 
+                            ],
+                        "defaultURI": "http://id.loc.gov/vocabulary/iso639-1/en"    
+                    }
+                 }, 
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/listID",
+                    "propertyLabel": "List ID",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/localSubject",
+                    "propertyLabel": "Local Subject",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/majorAlignment",
+                    "propertyLabel": "Major Alignment",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/minorAlignment",
+                    "propertyLabel": "Minor Alignment",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/narrowAlignment",
+                    "propertyLabel": "Narrow Alignment",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "valueTemplateRefs": [ 
+                            "asn:Statement" 
+                            ]
+                       }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/skillEmbodied",
+                    "propertyLabel": "Skills Embodied",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "true",
+                        "mandatory": "false",
+                        "usesValuesFrom": [
+                             "http://purl.org/ASN/schema/core/SkillsEmbodied"
+                        ]
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/spatial",
+                    "propertyLabel": "Spatial",
+                    "type": "literal",
+                    "valueConstraint": {
+                        "valueDataType": {
+                           "repeatable": "true",
+                           "mandatory": "false",                        
+                           "resourceURI": [
+                              "http://purl.org/dc/terms/Box",
+                              "http://purl.org/dc/terms/ISO3166",
+                              "http://purl.org/dc/terms/Point",
+                              "http://purl.org/dc/terms/TGN",
+                              "http://sws.geonames.org/ontology Geonames"
+                           ]
+                        }
+                    }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/statementLabel",
+                    "propertyLabel": "Statement Label",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false",
+                    "valueConstraint": {
+                        "valueLanguage": "en"
+                        }
+                 },
+                 {
+                    "propertyURI": "http://purl.org/ASN/schema/core/statementNotation",
+                    "propertyLabel": "Statement Notation",
+                    "type": "literal",
+                    "repeatable": "true",
+                    "mandatory": "false"
+                 },
+                 {
+                    "propertyURI": "http://purl.org/dc/terms/subject",
+                    "propertyLabel": "Subject",
+                    "type": "resource",
+                    "valueConstraint": {
+                        "repeatable": "false",
+                        "mandatory": "true",
+                        "usesValuesFrom": [
+                            "http://purl.org/ASN/scheme/ASNTopics/" 
+                            ]
+                    }
+                 },
+                 {  
+                    "propertyURI": "http://purl.org/dc/terms/temporal",
+                    "propertyLabel": "Temporal",
+                    "type": "literal",
+                    "valueConstraint": {
+                        "valueDataType": {
+                           "repeatable": "true",
+                           "mandatory": "false",                        
+                           "resourceURI": [
+                              "http://dublincore.org/documents/dcmi-period",
+                              "http://www.w3.org/2001/XMLSchema#dateTime"
+                           ]
+                        }
+                    }
+                 }
+             ]
+          }
+      ]
+   }
+}

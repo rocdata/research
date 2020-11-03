@@ -1,0 +1,294 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "case": "https://purl.imsglobal.org/spec/case/v1p0/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "dtAssociationLink": "case:dtAssociationLink",
+    "dtCASE-LD": "case:dtCASE-LD",
+    "dtCFAssociation": "case:dtCFAssociation",
+    "dtCFAssociationGrouping": "case:dtCFAssociationGrouping",
+    "dtCFAssociationSet": "case:dtCFAssociationSet",
+    "dtCFConcept": "case:dtCFConcept",
+    "dtCFConceptSet": "case:dtCFConceptSet",
+    "dtCFDefinition": "case:dtCFDefinition",
+    "dtCFDocument": "case:dtCFDocument",
+    "dtCFDocumentSet": "case:dtCFDocumentSet",
+    "dtCFItem": "case:dtCFItem",
+    "dtCFItemType": "case:dtCFItemType",
+    "dtCFItemTypeSet": "case:dtCFItemTypeSet",
+    "dtCFLicense": "case:dtCFLicense",
+    "dtCFPackage": "case:dtCFPackage",
+    "dtCFPckgAssociation": "case:dtCFPckgAssociation",
+    "dtCFPckgDocument": "case:dtCFPckgDocument",
+    "dtCFPckgItem": "case:dtCFPckgItem",
+    "dtCFRubric": "case:dtCFRubric",
+    "dtCFRubricCriterion": "case:dtCFRubricCriterion",
+    "dtCFRubricCriterionLevel": "case:dtCFRubricCriterionLevel",
+    "dtCFSubject": "case:dtCFSubject",
+    "dtCFSubjectSet": "case:dtCFSubjectSet",
+    "dtLinkGenURI": "case:dtLinkGenURI",
+    "dtLinkURI": "case:dtLinkURI",
+    "dtURL": {
+      "@id": "case:dtURL",
+      "@type": "xsd:anyURI"
+    },
+    "dtUUID": {
+      "@id": "case:dtUUID",
+      "@type": "xsd:normalizedString"
+    },
+    "CFAssociationGrouping": "case:dtCFAssociationGrouping",
+    "CFAssociationGroupingURI": {
+      "@id": "case:CFAssociationGroupURI",
+      "@type": "@id"
+    },
+    "CFAssociationGroupings": {
+      "@id": "case:dtCFAssociationGrouping",
+      "@container": "@set"
+    },
+    "CFAssociations": {
+      "@id": "case:dtCFPckgAssociation",
+      "@container": "@set"
+    },
+    "CFConcept": "case:dtCFConcept",
+    "CFConcepts": {
+      "@id": "case:dtCFConcept",
+      "@container": "@set"
+    },
+    "CFDefinitions": "case:dtCFDefinition",
+    "CFDocument": "case:dtCFDocument",
+    "CFDocumentURI": {
+      "@id": "case:CFDocumentURI",
+      "@type": "@id"
+    },
+    "CFDocuments": {
+      "@id": "case:dtCFDocument",
+      "@container": "@set"
+    },
+    "CFItem": "case:dtCFItem",
+    "CFItemType": "case:dtCFItemType",
+    "CFItemTypeURI": {
+      "@id": "case:CFItemTypeURI",
+      "@type": "@id"
+    },
+    "CFItemTypes": {
+      "@id": "case:dtCFItemType",
+      "@container": "@set"
+    },
+    "CFItemURI": {
+      "@id": "case:CFItemURI",
+      "@type": "@id"
+    },
+    "CFItems": {
+      "@id": "case:dtCFPckgItem",
+      "@container": "@set"
+    },
+    "CFLicense": "case:dtCFLicense",
+    "CFLicenses": {
+      "@id": "case:dtCFLicense",
+      "@container": "@set"
+    },
+    "CFPackage": "case:dtCFPackage",
+    "CFPackageURI": {
+      "@id": "case:CFPackageURI",
+      "@type": "@id"
+    },
+    "CFRubric": "case:dtCFRubric",
+    "CFRubricCriteria": {
+      "@id": "case:dtCFRubricCriterion",
+      "@container": "@set"
+    },
+    "CFRubricCriterionLevels": {
+      "@id": "case:dtCFRubricCriterionLevel",
+      "@container": "@set"
+    },
+    "CFRubrics": {
+      "@id": "case:dtCFRubric",
+      "@container": "@set"
+    },
+    "CFSubject": "case:dtCFSubject",
+    "CFSubjects": {
+      "@id": "case:dtCFSubject",
+      "@container": "@set"
+    },
+    "abbreviatedStatement": {
+      "@id": "case:abbreviatedStatement",
+      "@type": "xsd:normalizedString"
+    },
+    "adoptionStatus": {
+      "@id": "case:adoptionStatus",
+      "@type": "xsd:normalizedString"
+    },
+    "alternativeLabel": {
+      "@id": "case:alternativeLabel",
+      "@type": "xsd:normalizedString"
+    },
+    "associationSet": {
+      "@id": "case:dtAssociationLink",
+      "@container": "@set"
+    },
+    "associationType": "case:CFAssociationTypeEnumDType",
+    "category": {
+      "@id": "case:category",
+      "@type": "xsd:normalizedString"
+    },
+    "conceptKeywords": {
+      "@id": "case:conceptKeywords",
+      "@type": "xsd:normalizedString",
+      "@container": "@set"
+    },
+    "conceptKeywordsURI": {
+      "@id": "case:conceptKeywordsURI",
+      "@type": "@id"
+    },
+    "creator": {
+      "@id": "case:creator",
+      "@type": "xsd:normalizedString"
+    },
+    "description": {
+      "@id": "case:description",
+      "@type": "xsd:string"
+    },
+    "destinationNodeURI": {
+      "@id": "case:destinationNodeURI",
+      "@type": "@id"
+    },
+    "educationLevel": {
+      "@id": "case:educationLevel",
+      "@type": "xsd:normalizedString",
+      "@container": "@set"
+    },
+    "feedback": {
+      "@id": "case:feedback",
+      "@type": "xsd:string"
+    },
+    "fullStatement": {
+      "@id": "case:fullStatement",
+      "@type": "xsd:normalizedString"
+    },
+    "hierarchyCode": {
+      "@id": "case:hierarchyCode",
+      "@type": "xsd:normalizedString"
+    },
+    "humanCodingScheme": {
+      "@id": "case:humanCodingScheme",
+      "@type": "xsd:normalizedString"
+    },
+    "identifier": {
+      "@id": "case:identifier",
+      "@type": "xsd:normalizedString"
+    },
+    "keywords": {
+      "@id": "case:keywords",
+      "@type": "xsd:normalizedString"
+    },
+    "language": "schema:inLanguage",
+    "lastChangeDateTime": {
+      "@id": "case:lastChangeDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "licenseText": {
+      "@id": "case:licenseText",
+      "@type": "xsd:string"
+    },
+    "licenseURI": {
+      "@id": "case:licenseURI",
+      "@type": "@id"
+    },
+    "listEnumeration": {
+      "@id": "case:listEnumeration",
+      "@type": "xsd:normalizedString"
+    },
+    "notes": {
+      "@id": "case:notes",
+      "@type": "xsd:string"
+    },
+    "officialSourceURL": "case:dtURL",
+    "originNodeURI": {
+      "@id": "case:originNodeURI",
+      "@type": "@id"
+    },
+    "position": {
+      "@id": "case:position",
+      "@type": "xsd:integer"
+    },
+    "publisher": {
+      "@id": "case:publisher",
+      "@type": "xsd:normalizedString"
+    },
+    "quality": {
+      "@id": "case:quality",
+      "@type": "xsd:normalizedString"
+    },
+    "rubricCriterionId": "case:dtUUID",
+    "rubricId": "case:dtUUID",
+    "score": {
+      "@id": "case:score",
+      "@type": "xsd:float"
+    },
+    "sequenceNumber": {
+      "@id": "case:sequenceNumber",
+      "@type": "xsd:integer"
+    },
+    "statusEndDate": {
+      "@id": "case:statusEndDate",
+      "@type": "xsd:date"
+    },
+    "statusStartDate": {
+      "@id": "case:statusStartDate",
+      "@type": "xsd:date"
+    },
+    "subject": {
+      "@id": "case:subject",
+      "@type": "xsd:normalizedString",
+      "@container": "@set"
+    },
+    "title": {
+      "@id": "case:title",
+      "@type": "xsd:normalizedString"
+    },
+    "typeCode": {
+      "@id": "case:typeCode",
+      "@type": "xsd:normalizedString"
+    },
+    "version": {
+      "@id": "case:version",
+      "@type": "xsd:normalizedString"
+    },
+    "weight": {
+      "@id": "case:weight",
+      "@type": "xsd:float"
+    },
+    "AssociationLink": "dtAssociationLink",
+    "CASE-LD": "dtCASE-LD",
+    "CFAssociation": "dtCFAssociation",
+    "CFAssociationSet": "dtCFAssociationSet",
+    "CFConceptSet": "dtCFConceptSet",
+    "CFDefinition": "dtCFDefinition",
+    "CFDocumentSet": "dtCFDocumentSet",
+    "CFItemTypeSet": "dtCFItemTypeSet",
+    "CFPckgAssociation": "dtCFPckgAssociation",
+    "CFPckgDocument": "dtCFPckgDocument",
+    "CFPckgItem": "dtCFPckgItem",
+    "CFRubricCriterion": "dtCFRubricCriterion",
+    "CFRubricCriterionLevel": "dtCFRubricCriterionLevel",
+    "CFSubjectSet": "dtCFSubjectSet",
+    "LinkGenURI": "dtLinkGenURI",
+    "LinkURI": "dtLinkURI",
+    "URL": "dtURL",
+    "UUID": "dtUUID",
+    "targetId": {
+      "@id": "case:targetId",
+      "@type": "@id"
+    },
+    "uri": {
+      "@id": "case:uri",
+      "@type": "@id"
+    },
+    "subjectURI": {
+      "@id": "case:subjectURI",
+      "@container": "@set"
+    }
+  }
+}
