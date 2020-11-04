@@ -82,17 +82,16 @@ gained significant momentum with near decade-long funding from the
 U.S. National Science Foundation (NSF) starting in 2002 to the Information School
 at the University of Washington and its collaborator, JES & Co., a U.S. non-profit.
 
+> The ASN uses an entity-relationship model with two entities - Standard Document and Statement. These entities are each assigned an inherently globally unique Uniform Resource Identifier (URI). ASN URI's are "resolved" over the web via the ASN Resolution Service. The most basic resolution is the HTML view that you see when you visit any ASN URI in your web browser but the real interoperable magic happens when you request a RDF serialization for a particular ASN URI.
+-- [source: ASN overview](http://www.achievementstandards.org/content/asn-resolution-service-overview)
+
+
 The goals of the NSF funding were two-fold: 
 
   * [ASN-DF](http://standards.asn.desire2learn.com/):
     to design a description framework for machine encoding of the competencies guiding K-12 STEM education in the U.S.; and, to promote it's wide, international adoption as a defacto standard; and
   * [ASN-US](http://standards.asn.desire2learn.com/ASN_DF_Application_Profiles.html):
     to develop a U.S. repository of competency frameworks for K-12 based on the ASN-DF.
-
-> The ASN uses an entity-relationship model with two entities - Standard Document and Statement. These entities are each assigned an inherently globally unique Uniform Resource Identifier (URI). ASN URI's are "resolved" over the web via the ASN Resolution Service. The most basic resolution is the HTML view that you see when you visit any ASN URI in your web browser but the real interoperable magic happens when you request a RDF serialization for a particular ASN URI. 
-
--- [source: ASN overview](http://www.achievementstandards.org/content/asn-resolution-service-overview)
-
 
 
 The [ASN repository](http://www.achievementstandards.org/resources/ASNJurisdiction) contains hundreds of curriculum documents  from USA, Australia, and Canada. In addition to the attributes and relationships defined for the objects in this domain, each of the above standards defines a set of controlled vocabularies for specifying [jurisdictions](http://elastic1.asn.desire2learn.com/asn/scheme/ASNJurisdiction/), [subjects](http://elastic1.asn.desire2learn.com/asn/scheme/ASNTopic/), [education levels](http://elastic1.asn.desire2learn.com/asn/scheme/ASNEducationLevel/), [publication status](http://elastic1.asn.desire2learn.com/asn/scheme/ASNPublicationStatus/), and [other attributes](http://elastic1.asn.desire2learn.com/asn/scheme). 
