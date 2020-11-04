@@ -214,16 +214,47 @@ The Learning Resource Metadata Initiative (LRMI) specification is a collection
 of classes and markup properties designed for describing educational resources.
 The specification is designed to be used in conjunction with the Dublin Core metadata terms.
 
-See [Learning Resource Metadata Initiative (LRMI) Specification Version 1.1](http://lrmi.net/specifications/lrmi/) for more details.
+See [Learning Resource Metadata Initiative (LRMI) Specification Version 1.1](http://lrmi.net/specifications/lrmi/)
+for details of the specification.
 
+The following code snippet shows an example metadata record for a lesson plan
+that makes use of the LRMI fields to specify the educational audience (teachers),
+what the resource is about (by reference to a WIKIDATA identifier), and specifies
+the education level with respect to  Scottish Credit and Qualifications Framework (SCQF).
 
-The LRMI defines the `educationalAlignment` property which is designed for linking resources to curriculum standards. Each standard alignment correlation can be qualified by specifying an `alignmentType` property, which has recommended (but not restricted) values: assesses, teaches, educationLevel, 
+```json
+{
+  "@context":  "https://schema.org/",
+  "@type": ["WebPage", "LearningResource"],
+  "url" : "http://example.org/lessonplan",
+  "name": "Lesson: The Declaration of Arbroath",
+  "about": {
+      "@id": "https://www.wikidata.org/entity/Q598496"
+  },
+  "learningResourceType": "lesson plan",
+  "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "teacher",
+  },
+  "typicalAgeRange": "10-12",
+  "educationalLevel": {
+      "@type": "DefinedTerm",
+      "name": "Level 2",
+      "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "SCQF",
+          "url": "https://scqf.org.uk/"
+      }
+  }
+}
+```
 
+The LRMI defines the `educationalAlignment` property which for linking resources
+to curriculum standards. Each standard alignment correlation can be qualified by
+specifying an `alignmentType` property, which has recommended (but not restricted)
+values: assesses, teaches, educationLevel, etc.
 
 For more information, see the [Research/LMRI and DCMI/](https://github.com/GROCCAD/research/tree/main/Research/LRMI%20and%20DCMI) folder on github.
-
-
-
 
 
 
