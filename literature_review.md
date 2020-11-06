@@ -213,7 +213,7 @@ The Learning Resource Metadata Initiative (LRMI) specification is a collection
 of classes and markup properties designed for describing educational resources.
 The specification is designed to be used in conjunction with the Dublin Core metadata terms.
 
-See [Learning Resource Metadata Initiative (LRMI) Specification Version 1.1](http://lrmi.net/specifications/lrmi/)
+See [LRMI Metadata Terms](https://www.dublincore.org/specifications/lrmi/lrmi_terms/)
 for details of the specification.
 
 The following code snippet shows an example metadata record for a lesson plan
