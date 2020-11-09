@@ -92,11 +92,9 @@
 <ul class="incremental">
 <li><a href="#achievement-standards-network"><span class="toc-section-number">2.1</span> Achievement Standards Network</a></li>
 <li><a href="#notes"><span class="toc-section-number">2.2</span> Notes</a></li>
-<li><a href="#competencies-academic-standards-exchange"><span class="toc-section-number">2.3</span> Competencies &amp; Academic Standards Exchange</a>
-<ul class="incremental">
-<li><a href="#links"><span class="toc-section-number">2.3.1</span> Links</a></li>
-<li><a href="#opensalt"><span class="toc-section-number">2.3.2</span> OpenSALT</a></li>
-</ul></li>
+<li><a href="#credential-transparency-description-language"><span class="toc-section-number">2.3</span> Credential Transparency Description Language</a></li>
+<li><a href="#competencies-academic-standards-exchange"><span class="toc-section-number">2.4</span> Competencies &amp; Academic Standards Exchange</a></li>
+<li><a href="#other-frameworks-for-work-related-competencies"><span class="toc-section-number">2.5</span> Other frameworks for work-related competencies</a></li>
 </ul></li>
 <li><a href="#content-metadata-standards"><span class="toc-section-number">3</span> Content metadata standards</a>
 <ul class="incremental">
@@ -107,17 +105,17 @@
 <ul class="incremental">
 <li><a href="#content-correlations"><span class="toc-section-number">4.1</span> Content correlations</a></li>
 <li><a href="#standards-alignment"><span class="toc-section-number">4.2</span> Standards alignment</a></li>
-<li><a href="#intermediate-representations"><span class="toc-section-number">4.3</span> Intermediate representations</a>
-<ul class="incremental">
-<li><a href="#compendium-of-academic-standards"><span class="toc-section-number">4.3.1</span> Compendium of Academic Standards</a></li>
-<li><a href="#granular-matching"><span class="toc-section-number">4.3.2</span> Granular matching</a></li>
-<li><a href="#unesco-global-framework-of-reference-for-reading-and-mathematics"><span class="toc-section-number">4.3.3</span> UNESCO Global Framework of Reference for Reading and Mathematics</a></li>
-</ul></li>
+<li><a href="#intermediate-representations"><span class="toc-section-number">4.3</span> Intermediate representations</a></li>
 </ul></li>
 <li><a href="#conclusion"><span class="toc-section-number">5</span> Conclusion</a></li>
 <li><a href="#references">References</a></li>
 </ul>
 </nav>
+<p><strong>CHANGELOG</strong></p>
+<ul class="incremental">
+<li>2020-11-09: added links to CTDL-ASN, CaSS editor, IEEE 1484.20.1-2007, ESCO, RSD, and InLOC.</li>
+<li>2020-11-04: initial draft covering general context and ASN, CASE, LOM, LRMI.</li>
+</ul>
 <h1 data-number="1" id="introduction"><span class="header-section-number">1</span> Introduction</h1>
 <p>Educational systems around the world are increasingly based on curriculum standards. These standards are intended to be used as the blueprint for all components of the educational system: - Standards define what should be taught (content standards). what skill students should develop (competency standards), and the level of proficiency students must attain (proficiency standards) - Content producers use these standards to create textbooks “aligned” to the standards - Educational institutions use the standards to plan their programs - Teachers use the standards to build the curriculum for their classes - Examination are created to test the specific knowledge/skills defined in the standards</p>
 <p>Curriculum standards usually describe what learners should know at different grades in a given subject and specific competencies they must demonstrate. Curriculum standards are made of individual statements with well-defined expectations, and are usually organized in hierarchical structures like:</p>
@@ -154,9 +152,10 @@
 <p>The wide variability of the structure and information contained in each standard poses a difficult challenge when trying to create computer representations of them.</p>
 <p>This literature review summarizes prior work done towards building data models for curriculum standards, which has been an active area of research for the past 20 years.</p>
 <h1 data-number="2" id="schemas-for-curriculum-standards"><span class="header-section-number">2</span> Schemas for curriculum standards</h1>
-<p>There are two notable prior efforts to produce a schema for digital curriculum documents:</p>
+<p>There are three notable prior efforts to produce a schema for digital curriculum documents:</p>
 <ul class="incremental">
 <li>Achievement Standards Network (ASN)</li>
+<li></li>
 <li>Competencies &amp; Academic Standards Exchange (CASE)</li>
 </ul>
 <p>We’ll provide detailed notes for each standard and related research below.</p>
@@ -181,10 +180,19 @@
 <p>Similar to the above, the ASN framework specifies the following types of relations that can exist between a learning resource and a standard node: <code>exactCorrelation</code>, <code>narrowCorrelation</code>, <code>broadCorrelation</code>, <code>minorCorrelation</code>, <code>majorCorrelation</code>, etc.</p>
 <p>The terminology broad/narrow is inspired from the SKOS concepts of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch">broadMatch</a> and <a href="https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch">narrowMatch</a>.</p>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
-<h2 data-number="2.3" id="competencies-academic-standards-exchange"><span class="header-section-number">2.3</span> Competencies &amp; Academic Standards Exchange</h2>
+<h2 data-number="2.3" id="credential-transparency-description-language"><span class="header-section-number">2.3</span> Credential Transparency Description Language</h2>
+<p>The <a href="https://credreg.net/ctdlasn/terms/">Credential Transparency Description Language (CTDL-ASN)</a> schema is based on the ASN, but uses the terminology of “competencies” and “frameworks” instead of “statements” and “documents.” This schema is developed by <a href="https://credentialengine.org/">Credential Engine</a> and used by employers, accreditation agencies, and educational institutions to edit, publish, and find work-related competencies.</p>
+<p>The CTDL-ASN schema has an active ecosystem of tools and services around it:</p>
+<ul class="incremental">
+<li><a href="https://github.com/cassproject/cass-editor">CaSS Editor</a>: a web application for editing competency frameworks and building crosswalk between them. The CaSS supports importing competency frameworks from ASN and CASE data formats, as well as upload through semi-structured formats like text, CSV, etc.</li>
+<li><a href="https://credentialengine.org/about/credential-registry-overview/">Credential Engine Registry</a>: an API and registration portal that allows organizations to publish the competency frameworks.</li>
+<li><a href="https://credentialfinder.org/">Credentials Finder</a>: a service to lookup and browse all the frameworks published to the Credential Engine Registry.</li>
+</ul>
+<p>For more information see the <a href="https://credreg.net/">Credential Engine Technical Site</a>, the <a href="https://credreg.net/ctdl/handbook">CTDL Handbook</a>, and the <a href="https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN">Research/CTDL-ASN/</a> folder on github.</p>
+<h2 data-number="2.4" id="competencies-academic-standards-exchange"><span class="header-section-number">2.4</span> Competencies &amp; Academic Standards Exchange</h2>
 <p>This standard defines a set of data models for competency frameworks, competency documents, entries, associations, and rubrics and also codifies the network protocol for exchange of these standards. The standard defines a controlled vocabulary for the different <a href="http://www.imsglobal.org/sites/default/files/CASE/casev1p0/information_model/caseservicev1p0_infomodelv1p0.html#Enumerated_CFAssociationTypeEnum">association types</a> between standard entries.</p>
 <p>CASE adoption mainly by US states: Texas, Georgia, LearningMate(South Carolina), and Florida.</p>
-<h3 data-number="2.3.1" id="links"><span class="header-section-number">2.3.1</span> Links</h3>
+<h3 data-number="2.4.1" id="links"><span class="header-section-number">2.4.1</span> Links</h3>
 <ul class="incremental">
 <li><p>Competencies &amp; Academic Standards Exchange (CASE) <a href="http://www.imsglobal.org/activity/case">http://www.imsglobal.org/activity/case</a></p>
 <ul class="incremental">
@@ -203,7 +211,7 @@
 <li><p><a href="https://anchor.fm/edtechinterop/episodes/Episode-3---CASE-e3u3s2/a-aebhjb">Podcast episode about CASE</a></p></li>
 </ul>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
-<h3 data-number="2.3.2" id="opensalt"><span class="header-section-number">2.3.2</span> OpenSALT</h3>
+<h3 data-number="2.4.2" id="opensalt"><span class="header-section-number">2.4.2</span> OpenSALT</h3>
 <p>OpenSALT is a reference implementation of CASE.</p>
 <ul class="incremental">
 <li>website: <a href="https://sites.google.com/view/opensalt/home">https://sites.google.com/view/opensalt/home</a></li>
@@ -216,6 +224,17 @@
 <li>Smarter balance: <a href="https://case.smarterbalanced.org/cfdoc/">https://case.smarterbalanced.org/cfdoc/</a></li>
 </ul></li>
 </ul>
+<h2 data-number="2.5" id="other-frameworks-for-work-related-competencies"><span class="header-section-number">2.5</span> Other frameworks for work-related competencies</h2>
+<p>There are several other projects related to defining work-related competencies that are currently being developed:</p>
+<ul class="incremental">
+<li>The <a href="https://www.imsglobal.org/competencies/rdceov1p0/imsrdceo_infov1p0.html">IMS Reusable Definition of Competency or Educational Objective</a> is a data model that allows to specify The same schema is undergoing certification by the IEEE as the <a href="https://standards.ieee.org/standard/1484_20_1-2007.html">IEEE 1484.20.1-2007 - IEEE Standard for Learning Technology-Data Model for Reusable Competency Definitions</a>, a copy of the standards is <a href="https://web.archive.org/web/20170119031209/http://www.doleta.gov/usworkforce/pdf/2007-IEEEcomp.pdf">available here</a>. This specification does not address the aggregation of smaller competencies into larger competencies (e.g., “throws” plus “catches” equals “plays ball”) and does not address how competencies are to be assessed, certified, recorded, or used as part of a process such as instructional design or knowledge management. <!--   There is ongoing work on the specification
+   https://standards.ieee.org/project/1484_20_2.html
+P1484.20.2 "Recommended Practice" --></li>
+<li><a href="https://ec.europa.eu/esco/resources/data/static/model/html/model.xhtml">European Skills, Competences, qualifications and Occupations (ESCO)</a> is an EU initiative to define common definitions for occupations, skill/competences, and qualification. The ESCO classification can be <a href="https://ec.europa.eu/esco/portal/download">downloaded</a> with codes and descriptions available in most European languages.</li>
+<li><a href="https://rsd.osmt.dev/">Rich Skills Descriptor (RSD) standards</a> is another US effort to define a common vocabulary of skills developed by the <a href="https://www.openskillsnetwork.org/">Open Skills Network (OSN)</a>. See <a href="https://github.com/concentricsky/rsd-respec/">here</a> for more information.</li>
+<li><a href="http://www.cetis.org.uk/inloc/Home">Integrating Learning Outcomes and Competences (InLOC)</a> is another European effort to provide a model for the information defining both intended Learning outcomes and Work competences (LOCs). Read <a href="http://www.cetis.org.uk/inloc/Overview%2band%2bOrientation">here</a> for more info.</li>
+</ul>
+<p>The frameworks presented above are designed for work-related competencies, but the used cases for the data models being developed are similar to the use cases for curriculum standards—in both cases the goal is to establish shared identifiers that allows for interoperability between different systems.</p>
 <h1 data-number="3" id="content-metadata-standards"><span class="header-section-number">3</span> Content metadata standards</h1>
 <p>There are several standards for specifying metadata of “learning objects” which are interesting to look at in order to understand existing methods for attaching standards alignment information to content items. Alignment to standards is generally done by “tagging” content items with curriculum standard identifies (short codes or URIs).</p>
 <h2 data-number="3.1" id="learning-object-metadata-lom"><span class="header-section-number">3.1</span> Learning Object Metadata (LOM)</h2>

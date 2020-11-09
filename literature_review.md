@@ -2,6 +2,11 @@
 title: "Literature Review on Curriculum Standards"
 ---
 
+**CHANGELOG**
+
+ - 2020-11-09: added links to CTDL-ASN, CaSS editor, IEEE 1484.20.1-2007, ESCO, RSD, and InLOC.
+ - 2020-11-04: initial draft covering general context and ASN, CASE, LOM, LRMI.
+
 
 # Introduction
 
@@ -65,9 +70,10 @@ for curriculum standards, which has been an active area of research for the past
 
 # Schemas for curriculum standards 
 
-There are two notable prior efforts to produce a schema for digital curriculum documents:
+There are three notable prior efforts to produce a schema for digital curriculum documents:
 
 * Achievement Standards Network (ASN)
+* 
 * Competencies & Academic Standards Exchange (CASE) 
 
 We'll provide detailed notes for each standard and related research below.
@@ -134,8 +140,34 @@ The terminology broad/narrow is inspired from the SKOS concepts of
 and [narrowMatch](https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch).
 
 
-
 For more information, see the [Research/ASN/](https://github.com/GROCCAD/research/tree/main/Research/ASN) folder on github.
+
+
+
+## Credential Transparency Description Language
+
+The [Credential Transparency Description Language (CTDL-ASN)](https://credreg.net/ctdlasn/terms/) schema is based on the ASN,
+but uses the terminology of "competencies" and "frameworks" instead of "statements" and "documents."
+This schema is developed by [Credential Engine](https://credentialengine.org/)
+and used by employers, accreditation agencies, and educational institutions to
+edit, publish, and find work-related competencies.
+
+The CTDL-ASN schema has an active ecosystem of tools and services around it:
+
+ - [CaSS Editor](https://github.com/cassproject/cass-editor): a web application
+   for editing competency frameworks and building crosswalk between them.
+   The CaSS supports importing competency frameworks from ASN and CASE data formats,
+   as well as upload through semi-structured formats like text, CSV, etc.
+ - [Credential Engine Registry](https://credentialengine.org/about/credential-registry-overview/):
+   an API and registration portal that allows organizations to publish the
+   competency frameworks.
+ - [Credentials Finder](https://credentialfinder.org/): a service to lookup and
+   browse all the frameworks published to the Credential Engine Registry.
+
+For more information see the [Credential Engine Technical Site](https://credreg.net/),
+the [CTDL Handbook](https://credreg.net/ctdl/handbook),
+and the [Research/CTDL-ASN/](https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN) folder on github.
+
 
 
 
@@ -179,6 +211,42 @@ OpenSALT is a reference implementation of CASE.
     * ACT Holistic Framework: [http://frameworks.act.org/cfdoc/](http://frameworks.act.org/cfdoc/)
     * Smarter balance: [https://case.smarterbalanced.org/cfdoc/](https://case.smarterbalanced.org/cfdoc/)
 
+
+
+## Other frameworks for work-related competencies
+
+There are several other projects related to defining work-related competencies
+that are currently being developed:
+
+ - The [IMS Reusable Definition of Competency or Educational Objective](https://www.imsglobal.org/competencies/rdceov1p0/imsrdceo_infov1p0.html)
+   is a data model that allows to specify 
+   The same schema is undergoing certification by the IEEE as the
+   [IEEE 1484.20.1-2007 - IEEE Standard for Learning Technology-Data Model for Reusable Competency Definitions](https://standards.ieee.org/standard/1484_20_1-2007.html),
+   a copy of the standards is [available here](https://web.archive.org/web/20170119031209/http://www.doleta.gov/usworkforce/pdf/2007-IEEEcomp.pdf).
+   This specification does not address the aggregation of smaller competencies into larger competencies
+   (e.g., "throws" plus "catches" equals "plays ball") and does not address how
+   competencies are to be assessed, certified, recorded, or used as part of a
+   process such as instructional design or knowledge management.
+<!--   There is ongoing work on the specification
+   https://standards.ieee.org/project/1484_20_2.html
+P1484.20.2 "Recommended Practice" -->
+ - [European Skills, Competences, qualifications and Occupations (ESCO)](https://ec.europa.eu/esco/resources/data/static/model/html/model.xhtml)
+   is an EU initiative to define common definitions for occupations,
+   skill/competences, and qualification.
+   The ESCO classification can be [downloaded](https://ec.europa.eu/esco/portal/download) with codes and descriptions available in most European languages.
+ - [Rich Skills Descriptor (RSD) standards](https://rsd.osmt.dev/) is another US
+   effort to define a common vocabulary of skills developed by the
+   [Open Skills Network (OSN)](https://www.openskillsnetwork.org/).
+   See [here](https://github.com/concentricsky/rsd-respec/) for more information.
+ - [Integrating Learning Outcomes and Competences (InLOC)](http://www.cetis.org.uk/inloc/Home)
+   is another European effort to provide a model for the information defining both
+   intended Learning outcomes and Work competences (LOCs).
+   Read [here](http://www.cetis.org.uk/inloc/Overview%2band%2bOrientation) for more info.
+
+The frameworks presented above are designed for work-related competencies, but
+the used cases for the data models being developed are similar to the use cases
+for curriculum standards—in both cases the goal is to establish shared identifiers
+that allows for interoperability between different systems.
 
 
 
