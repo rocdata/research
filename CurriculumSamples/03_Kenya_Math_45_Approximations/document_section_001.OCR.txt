@@ -1,0 +1,29 @@
+45.0.0 APPROXIMATIONS AND
+ERRORS (16 Lessons)
+45.1.0	Specific Objectives
+By the end of the topic, the learner should be able to:
+a)	use calculators in various
+computations
+b)	make reasonable approximations and estimations of quantities in computations and measurements
+c)	express values to a given number of significant figures
+d)	define absolute, relative, percentage, round-off and truncation errors
+e)	determine possible errors made from computations
+0 find maximum and minimum errors from operations.
+45.2.0	Content
+45.2.1	Computing using calculators
+45.2.2	Estimations and approximations
+45.2.3	Significant figures
+45.2.4	Absolute, relative, percentage, round-off and truncation errors
+45.2.5	Propagation of errors from simple calculations
+45.2.6	Maximum and minimum errors
+Notes
+Use calculators in various computations involving the four basic operations, squares, square roots, cubes and cube roots.
+Confine to errors propagated in addition, subtraction, multiplication and division.
+- Include maximum and minimum errors from operations.
+Suggested Resources
+-	Measuring instruments
+-	Calculators
+-	Real life experiences Suggested Further Assessment
+-	Practical Exercises
+-	Quiz
+

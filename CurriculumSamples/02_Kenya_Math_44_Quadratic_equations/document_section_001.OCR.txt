@@ -1,0 +1,40 @@
+44.0.0 QUADRATIC EXPRESSIONS AND EQUATIONS (2)
+(22 Lessons)
+44.1.0	Specific Objectives
+By the end of the topic, the learner should be able to:
+a)	factorise quadratic expressions
+b)	identify perfect squares
+c)	complete the square
+d)	solving quadratic equations by completing the square
+e)	derive the quadratic formula 0 solve quadratic equations using the formula
+g)	form and solve quadratic equations from roots and
+given situations
+h)	make tables of values from a quadratic relation
+i)	draw the graph of a quadratic relation
+j)	solve quadratic equations using graphs
+k)	solve simultaneous equations (pne linear and one quadratic) analytically and graphically
+l)	apply the knowledge of quadratic equations to real life situations.
+2.0	Content
+2.1	Factorisation of quadratic expressions
+2.3	Perfect squares
+2.4	Completion of the square
+2.5	Solution of quadratic equations by completing the square
+
+
+44.2.6	Quadratic
+,	.	- h±yjb2 -4 ac
+formula*-------------------—
+2a
+44.2.7	Solution of quadratic equations using the formula.
+44.2.H Formation of quadratic equations and solving them
+44.2	9 Tables of values for a given quadratic relation
+44.2.10	Graphs of quadratic equations
+44.2.11	Simultaneous equations - one linear and one quadratic
+44.2.12	Application to real life situation
+Notes
+-	Use quadratic equation to solve other related quadratic equations graphically
+-	Interpret the discriminant i.e. V(b2-4ac).
+■Suggested Resources
+-	Square boards
+-	Graph papers Suggested Assessment Test on 44.0.0
+
