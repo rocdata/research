@@ -109,10 +109,10 @@ The Honduras educational standards (Estándares Educativos Nacionales) are an in
 because they are available in two alternative organizations: by grade level and by topic.
 
 Curriculum standards for Grade 2 Math, in the block "Números y Operaciones":
-![](CurriculumSamples/07_Honduras/Math_2__Números_y_Operaciones.png)
+![](CurriculumSamples/07_Honduras/Math_2__Numeros_y_Operaciones.png)
 
 The same statements also appear appear in the "Multiplicación" component progression across levels:
-![](CurriculumSamples/07_Honduras/Math__Números_y_Operaciones__Multiplicación_progression.png)
+![](CurriculumSamples/07_Honduras/Math__Numeros_y_Operaciones__Multiplicacion_progression.png)
 
 Notes:
  - The Honduras standards do no have unique identifiers associated with each statement, so we would need to invent them.
