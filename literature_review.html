@@ -88,31 +88,36 @@
 <nav id="TOC" role="doc-toc">
 <ul class="incremental">
 <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
-<li><a href="#schemas-for-curriculum-standards"><span class="toc-section-number">2</span> Schemas for curriculum standards</a>
+<li><a href="#curriculum-documents-examples"><span class="toc-section-number">2</span> Curriculum documents examples</a>
 <ul class="incremental">
-<li><a href="#achievement-standards-network"><span class="toc-section-number">2.1</span> Achievement Standards Network</a></li>
-<li><a href="#notes"><span class="toc-section-number">2.2</span> Notes</a></li>
-<li><a href="#credential-transparency-description-language"><span class="toc-section-number">2.3</span> Credential Transparency Description Language</a></li>
-<li><a href="#competencies-academic-standards-exchange"><span class="toc-section-number">2.4</span> Competencies &amp; Academic Standards Exchange</a></li>
-<li><a href="#other-frameworks-for-work-related-competencies"><span class="toc-section-number">2.5</span> Other frameworks for work-related competencies</a></li>
+<li><a href="#document-examples"><span class="toc-section-number">2.1</span> Document examples</a></li>
+<li><a href="#standard-statements-examples"><span class="toc-section-number">2.2</span> Standard statements examples</a></li>
 </ul></li>
-<li><a href="#content-metadata-standards"><span class="toc-section-number">3</span> Content metadata standards</a>
+<li><a href="#schemas-for-curriculum-standards"><span class="toc-section-number">3</span> Schemas for curriculum standards</a>
 <ul class="incremental">
-<li><a href="#learning-object-metadata-lom"><span class="toc-section-number">3.1</span> Learning Object Metadata (LOM)</a></li>
-<li><a href="#learning-resource-metadata-initiative-lrmi"><span class="toc-section-number">3.2</span> Learning Resource Metadata Initiative (LRMI)</a></li>
+<li><a href="#achievement-standards-network"><span class="toc-section-number">3.1</span> Achievement Standards Network</a></li>
+<li><a href="#credential-transparency-description-language"><span class="toc-section-number">3.2</span> Credential Transparency Description Language</a></li>
+<li><a href="#competencies-academic-standards-exchange"><span class="toc-section-number">3.3</span> Competencies &amp; Academic Standards Exchange</a></li>
+<li><a href="#other-frameworks-for-work-related-competencies"><span class="toc-section-number">3.4</span> Other frameworks for work-related competencies</a></li>
 </ul></li>
-<li><a href="#alignment"><span class="toc-section-number">4</span> Alignment</a>
+<li><a href="#content-metadata-standards"><span class="toc-section-number">4</span> Content metadata standards</a>
 <ul class="incremental">
-<li><a href="#content-correlations"><span class="toc-section-number">4.1</span> Content correlations</a></li>
-<li><a href="#standards-alignment"><span class="toc-section-number">4.2</span> Standards alignment</a></li>
-<li><a href="#intermediate-representations"><span class="toc-section-number">4.3</span> Intermediate representations</a></li>
+<li><a href="#learning-object-metadata-lom"><span class="toc-section-number">4.1</span> Learning Object Metadata (LOM)</a></li>
+<li><a href="#learning-resource-metadata-initiative-lrmi"><span class="toc-section-number">4.2</span> Learning Resource Metadata Initiative (LRMI)</a></li>
 </ul></li>
-<li><a href="#conclusion"><span class="toc-section-number">5</span> Conclusion</a></li>
+<li><a href="#alignment"><span class="toc-section-number">5</span> Alignment</a>
+<ul class="incremental">
+<li><a href="#content-correlations"><span class="toc-section-number">5.1</span> Content correlations</a></li>
+<li><a href="#standards-alignment"><span class="toc-section-number">5.2</span> Standards alignment</a></li>
+<li><a href="#intermediate-representations"><span class="toc-section-number">5.3</span> Intermediate representations</a></li>
+</ul></li>
+<li><a href="#conclusion"><span class="toc-section-number">6</span> Conclusion</a></li>
 <li><a href="#references">References</a></li>
 </ul>
 </nav>
 <p><strong>CHANGELOG</strong></p>
 <ul class="incremental">
+<li>2020-11-17: added representative examples from several curriculum documens</li>
 <li>2020-11-09: added links to CTDL-ASN, CaSS editor, IEEE 1484.20.1-2007, ESCO, RSD, and InLOC.</li>
 <li>2020-11-04: initial draft covering general context and ASN, CASE, LOM, LRMI.</li>
 </ul>
@@ -127,7 +132,8 @@
 <p>Each level of this hierarchy defines specific descriptions of the content, learning objectives, and competencies that are expected of students.</p>
 <p>The structure and content of curriculum standards varies widely. Each standard entries can have any subset of the following attributes:</p>
 <ul class="incremental">
-<li><strong>Kind / Label</strong>: a label that describes the kind of entry (what level of the hierarchy)</li>
+<li><strong>Path</strong>: the position of statement within the document (e.g. Ghana &gt; Math &gt; B4).</li>
+<li><strong>Kind / Label</strong>: a label that describes the kind of entry (what level of the hierarchy).</li>
 <li><strong>Code / Statement Notation</strong>: a human-readable short code like <a href="http://www.corestandards.org/Math/Content/2/MD/D/10/"><code>2.MD.D.10</code></a></li>
 <li><strong>Identifier / URI</strong>: a machine-readable code that identifies this curriculum standard entry (only available in standards in digital form).</li>
 <li><strong>Description</strong>: the full statement of the learning standard or performance expectation. This can be anywhere from a few words to a whole paragraph.</li>
@@ -146,20 +152,63 @@
 <li><strong>Practices / Core ideas / Cross-cutting concepts</strong>: these mentions provide information about aspects of the curriculum that are not captured by the primary hierarchy of the document.</li>
 <li><strong>Benchmarks / Rubrics</strong>: specific criteria used to evaluate the level of attainment of the skills/competency described by the standard entry.</li>
 <li><strong>Values / Skills</strong>: other explicit goals of the curriculum that are not captured by any of the other categories, including non-academic goals.</li>
+<li><strong>Key Inquiry Questions</strong>: central questions to organize a class on this topic.</li>
 <li><strong>Notes</strong>: clarifications, additional information, and non-statutory guidance.</li>
 </ul></li>
 </ul>
 <p>The wide variability of the structure and information contained in each standard poses a difficult challenge when trying to create computer representations of them.</p>
-<p>This literature review summarizes prior work done towards building data models for curriculum standards, which has been an active area of research for the past 20 years.</p>
-<h1 data-number="2" id="schemas-for-curriculum-standards"><span class="header-section-number">2</span> Schemas for curriculum standards</h1>
+<h1 data-number="2" id="curriculum-documents-examples"><span class="header-section-number">2</span> Curriculum documents examples</h1>
+<h2 data-number="2.1" id="document-examples"><span class="header-section-number">2.1</span> Document examples</h2>
+<p>The folder <a href="https://github.com/GROCCAD/research/tree/main/CurriculumDocs"><code>CurriculumDocs</code></a> contains examples of complete curriculum standards documents form several countries.</p>
+<p>In the next section we’ll present excerpts of individual statements from each of these documents.</p>
+<h2 data-number="2.2" id="standard-statements-examples"><span class="header-section-number">2.2</span> Standard statements examples</h2>
+<p>In order to understand great variability of information associated with standards statements, we’ll now look at representative excerpts of individual statements from different countries.</p>
+<h3 data-number="2.2.1" id="example-australia"><span class="header-section-number">2.2.1</span> Example: Australia</h3>
+<p>Australia is an excellent example of what is possible when curriculum standards are available.</p>
+<ul class="incremental">
+<li>Australia published <a href="http://vocabulary.curriculum.edu.au/">controlled vocabularies</a> that define things like audience level, curriculum elements, learning resource types, school levels, and even a controlled vocabulary of topics.</li>
+<li>Published the <strong>Australian Curriculum</strong> standards on a well-organized website <a href="https://www.australiancurriculum.edu.au">www.australiancurriculum.edu.au</a>.
+<ul class="incremental">
+<li>The standards are freely available as a <a href="https://www.australiancurriculum.edu.au/f-10-curriculum/mathematics/pdf-documents/">PDFs</a> or in <a href="http://rdf.australiancurriculum.edu.au/">machine readable form</a>.</li>
+<li>Each standard statement has associated a unique identifier.</li>
+</ul></li>
+<li>They defined specific metadata and tagging schemes for describing content correlations of learning resources</li>
+<li>They have a web portal with learning resources <a href="https://www.scootle.edu.au/ec/p/home">scootle.edu.au</a> aligned to specific standards</li>
+</ul>
+<p>Notes: - The Australia digital learning resources metadata efforts (MEX, SHEX) assumed a “closed system” model where all content is produced within Australia and tagged appropriately. Their <a href="https://www.scootle.edu.au/ec/p/faq#decommOne">current projects</a> will rely on “open system” with publishers independently producing materials, but curriculum correlation tags will continue to play a role.</p>
+<h3 data-number="2.2.2" id="example-honduras-mathematics"><span class="header-section-number">2.2.2</span> Example: Honduras mathematics</h3>
+<p>The Honduras educational standards (Estándares Educativos Nacionales) are an interesting case because they are available in two alternative organizations: by grade level and by topic.</p>
+<p>Curriculum standards for Grade 2 Math, in the block “Números y Operaciones”: <img src="CurriculumSamples/07_Honduras/Math_2__Números_y_Operaciones.png" /></p>
+<p>The same statements also appear appear in the “Multiplicación” component progression across levels: <img src="CurriculumSamples/07_Honduras/Math__Números_y_Operaciones__Multiplicación_progression.png" /></p>
+<p>Notes: - The Honduras standards do no have unique identifiers associated with each statement, so we would need to invent them. For example, the three statements in “Matemáticas &gt; Segundo grado &gt; Números y Operacione &gt; Multiplicación” could be tagged with <code>Mate.2.NO.M.1</code>, <code>Mate.2.NO.M.2</code>, <code>Mate.2.NO.M.3</code>. - The Honduras curriculum standards are a good example of a single-hierarchy structure: the subjects, blocks, components, and statements can be represented as a tree.</p>
+<h3 data-number="2.2.3" id="example-kenya-western-music-topics"><span class="header-section-number">2.2.3</span> Example: Kenya Western music topics</h3>
+<p>The KICD curriculum standards for Music are a good example a topic that appears repeatedly in several grade leves. The topic “Western music” appears in Form One, Form Two, Form Three, and Form Four with progressively more details:</p>
+<p><img src="CurriculumSamples/08_Kenya/KICD_Music_Form1_8_Western_music.png" style="width:24%;"> <img src="CurriculumSamples/08_Kenya/KICD_Music_Form2_18_Western_music.png" style="width:24%;"> <img src="CurriculumSamples/08_Kenya/KICD_Music_Form3_29_Western_music.png" style="width:24%;"> <img src="CurriculumSamples/08_Kenya/KICD_Music_Form4_37_Western_music.png" style="width:24%;"></p>
+<h3 data-number="2.2.4" id="example-uganda-biology"><span class="header-section-number">2.2.4</span> Example: Uganda Biology</h3>
+<p>This is an example of a curriculum standard presented in table format, with different components presented in the columns of the table.</p>
+<p>The figure below shows the first part of the topic “Biology &gt; Senior Three &gt; Term I &gt; Topic 5”: <img src="CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_001.png" /> See here for <a href="CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_002.png">part two</a> and <a href="CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_003.png">part three</a> of the statement.</p>
+<p>Notes: - This topic contains two subtopics “5.1 Gaseous exchanges” and “5.2 Tissue respiration” - This sections within each sub-topic do not have titles—they simply correspond to different groups of specific objectives and content. We have assigned identifiers (numbers shown in red) to represent these sections. - This standard statement has been manually transcribed to digital form, see <a href="https://docs.google.com/spreadsheets/d/1-ei7BBMOx0udbXxyLJjMPYLW0EJWg9wFUyV9ODa8m5o/edit#gid=1733263132">here</a></p>
+<h3 data-number="2.2.5" id="example-kenya-new-cbc"><span class="header-section-number">2.2.5</span> Example: Kenya new CBC</h3>
+<p>The new Kenya CBC (competency based curriculum) standards are very detailed and include numerous components, dimensions, and cross cutting concerns, all presented in tables.</p>
+<p>Example for the math sub-strand: Mathematics &gt; Grade 2 &gt; 1 Numbers &gt; 1.6 Multiplication: <img src="CurriculumSamples/08_Kenya/KICD_CBC_Mathematics_Grade2_1_Numbers_6_Multiplication.png" /></p>
+<p>Another example for the English sub-strand English &gt; Grade 4 &gt; 5 Nutrition &gt; 5.1 Listening and Speaking &gt; 5.1.1 Pronunciation and vocabulary: <img src="CurriculumSamples/08_Kenya/KICD_CBC_English_Grade4_5_Nutrition_5.1_Listening.png" /></p>
+<p>Notes: - Note the number of different elements specified in the standard (time allocation, specific learning outcomes, suggested learning experiences, key questions, core competencies, learning areas links, etc.) - Creating a faithful and complete digital representation of all the information in this table will be a significant challenge: we would either need a very flexible/extensible data model or have to represent only part of the information.</p>
+<h3 data-number="2.2.6" id="example-ghana"><span class="header-section-number">2.2.6</span> Example: Ghana</h3>
+<p>The Ghanian curriculum standards are available as <a href="https://nacca.gov.gh/?page_id=9230">PDFs from the NaCCA website</a>. Each statements in the Ghanian curriculum standards has an identifier of the form <code>Bx.y.z.v.w</code>, where <code>x</code> is the grade level, <code>y</code> is the strand number, <code>z</code> is the sub-strand number, <code>v</code> is standard number, and <code>w</code> is learning indicator number. The same structure is used in all subjects, so we’ll only show two representative examples.</p>
+<p>English example <code>B4.2.6.2</code>: <img src="CurriculumSamples/06_Ghana/English_B4.2.6.2_Build_vocabulary.png" /></p>
+<p>Math example <code>B4.1.5.1</code>: <img src="CurriculumSamples/06_Ghana/Math_B4.1.5.1_001.png" /></p>
+<p>The folder <a href="https://github.com/GROCCAD/research/tree/main/CurriculumSamples/06_Ghana"><code>CurriculumSamples/06_Ghana</code></a> contains additional examples.</p>
+<p>Notes: - The Ghanian curriculum standards contain a lot of useful examples, which would be important to capture as part of the digitization process. - The examples contain math equations, images, and illustrations.</p>
+<h1 data-number="3" id="schemas-for-curriculum-standards"><span class="header-section-number">3</span> Schemas for curriculum standards</h1>
+<p>We’ll now summarize some prior work done towards building data models for curriculum standards, which has been an active area of research for the past 20 years.</p>
 <p>There are three notable prior efforts to produce a schema for digital curriculum documents:</p>
 <ul class="incremental">
 <li>Achievement Standards Network (ASN)</li>
-<li></li>
+<li>Credential Transparency Description Language (CTDL-ASN)</li>
 <li>Competencies &amp; Academic Standards Exchange (CASE)</li>
 </ul>
 <p>We’ll provide detailed notes for each standard and related research below.</p>
-<h2 data-number="2.1" id="achievement-standards-network"><span class="header-section-number">2.1</span> Achievement Standards Network</h2>
+<h2 data-number="3.1" id="achievement-standards-network"><span class="header-section-number">3.1</span> Achievement Standards Network</h2>
 <p>The Achievement Standards Network (ASN) the most substantial effort to date to define a data model for curriculum documents. Achievement Standards Network Development of the ASN-DF dates back to 2000 and gained significant momentum with near decade-long funding from the U.S. National Science Foundation (NSF) starting in 2002 to the Information School at the University of Washington and its collaborator, JES &amp; Co., a U.S. non-profit.</p>
 <blockquote>
 <p>The ASN uses an entity-relationship model with two entities - Standard Document and Statement. These entities are each assigned an inherently globally unique Uniform Resource Identifier (URI). ASN URI’s are “resolved” over the web via the ASN Resolution Service. The most basic resolution is the HTML view that you see when you visit any ASN URI in your web browser but the real interoperable magic happens when you request a RDF serialization for a particular ASN URI. – <a href="http://www.achievementstandards.org/content/asn-resolution-service-overview">source: ASN overview</a></p>
@@ -174,25 +223,34 @@
 <p>
 <a href="Research/ASN/sutton2008metadata.pdf" target="_blank"> <img class="paper" src="Research/ASN/sutton2008metadata.pdf.png"> </a>   <a href="Research/ASN/sutton2008achievement.pdf" target="_blank"> <img class="paper" src="Research/ASN/sutton2008achievement.pdf.png"> </a>
 </p>
-<h2 data-number="2.2" id="notes"><span class="header-section-number">2.2</span> Notes</h2>
+<h3 data-number="3.1.1" id="notes"><span class="header-section-number">3.1.1</span> Notes</h3>
 <p>The ASN framework specifies the following types of relations that can exist between two standard statements: <code>broadAlignment</code>, <code>exactAlignment</code>, <code>majorAlignment</code>, <code>minorAlignment</code>, <code>narrowAlignment</code>.</p>
 <p><img src="Research/ASN/levels_of_alignment.png" /></p>
 <p>Similar to the above, the ASN framework specifies the following types of relations that can exist between a learning resource and a standard node: <code>exactCorrelation</code>, <code>narrowCorrelation</code>, <code>broadCorrelation</code>, <code>minorCorrelation</code>, <code>majorCorrelation</code>, etc.</p>
 <p>The terminology broad/narrow is inspired from the SKOS concepts of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch">broadMatch</a> and <a href="https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch">narrowMatch</a>.</p>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
-<h2 data-number="2.3" id="credential-transparency-description-language"><span class="header-section-number">2.3</span> Credential Transparency Description Language</h2>
+<h2 data-number="3.2" id="credential-transparency-description-language"><span class="header-section-number">3.2</span> Credential Transparency Description Language</h2>
 <p>The <a href="https://credreg.net/ctdlasn/terms/">Credential Transparency Description Language (CTDL-ASN)</a> schema is based on the ASN, but uses the terminology of “competencies” and “frameworks” instead of “statements” and “documents.” This schema is developed by <a href="https://credentialengine.org/">Credential Engine</a> and used by employers, accreditation agencies, and educational institutions to edit, publish, and find work-related competencies.</p>
 <p>The CTDL-ASN schema has an active ecosystem of tools and services around it:</p>
 <ul class="incremental">
-<li><a href="https://github.com/cassproject/cass-editor">CaSS Editor</a>: a web application for editing competency frameworks and building crosswalk between them. The CaSS supports importing competency frameworks from ASN and CASE data formats, as well as upload through semi-structured formats like text, CSV, etc.</li>
+<li><a href="https://github.com/cassproject/cass-editor">CaSS Editor</a>: a web application for editing competency frameworks and building crosswalk between them. See notes and screenshots below.</li>
 <li><a href="https://credentialengine.org/about/credential-registry-overview/">Credential Engine Registry</a>: an API and registration portal that allows organizations to publish the competency frameworks.</li>
 <li><a href="https://credentialfinder.org/">Credentials Finder</a>: a service to lookup and browse all the frameworks published to the Credential Engine Registry.</li>
 </ul>
 <p>For more information see the <a href="https://credreg.net/">Credential Engine Technical Site</a>, the <a href="https://credreg.net/ctdl/handbook">CTDL Handbook</a>, and the <a href="https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN">Research/CTDL-ASN/</a> folder on github.</p>
-<h2 data-number="2.4" id="competencies-academic-standards-exchange"><span class="header-section-number">2.4</span> Competencies &amp; Academic Standards Exchange</h2>
+<h3 data-number="3.2.1" id="cass-editor"><span class="header-section-number">3.2.1</span> CaSS Editor</h3>
+<p>The <a href="https://github.com/cassproject/cass-editor">CaSS editor</a> is an web application for importing, creating, editing, and exporting competency frameworks developed by <a href="https://eduworks.com">EduWorks</a>. The CaSS editor is open source and used as the new <a href="https://credentialengine.org/">Credential Engine</a> competency manager.</p>
+<p>The CaSS supports importing competency frameworks from CASE schema, and a number of other structured formats as CSV, JSON-LD, etc.</p>
+<p>The screenshot below shows the browsing interface for frameworks, which you can see for yourself <a href="https://cassproject.github.io/cass-editor/#/">here</a>. <img src="Research/SaCC/CaSS-framework-browser.png" /></p>
+<p>The browsing interface allows three levels of metadata details: primary, secondary, and tertiary. Each competency can be associated with one of the properties within the CaSS schema: <img src="Research/SaCC/CaSS-properties.png" /></p>
+<p>The set of available and required properties in the CaSS editor is controlled by a <a href="https://cassproject.github.io/cass-editor/#/configuration">configuraiton</a>.</p>
+<p>The CaSS editor can be used to create crosswalks between frameworks through two-column interface: <img src="Research/SaCC/CaSS-crosswalk-editing.png" /></p>
+<p>Frameworks can be exported as ASN (RDF), CTDL-ASN (JSON), CSV, and CASE formats:</p>
+<p><img src="Research/SaCC/exporters/exportable-framework-formats.png" style="width:400px"></p>
+<h2 data-number="3.3" id="competencies-academic-standards-exchange"><span class="header-section-number">3.3</span> Competencies &amp; Academic Standards Exchange</h2>
 <p>This standard defines a set of data models for competency frameworks, competency documents, entries, associations, and rubrics and also codifies the network protocol for exchange of these standards. The standard defines a controlled vocabulary for the different <a href="http://www.imsglobal.org/sites/default/files/CASE/casev1p0/information_model/caseservicev1p0_infomodelv1p0.html#Enumerated_CFAssociationTypeEnum">association types</a> between standard entries.</p>
 <p>CASE adoption mainly by US states: Texas, Georgia, LearningMate(South Carolina), and Florida.</p>
-<h3 data-number="2.4.1" id="links"><span class="header-section-number">2.4.1</span> Links</h3>
+<h3 data-number="3.3.1" id="links"><span class="header-section-number">3.3.1</span> Links</h3>
 <ul class="incremental">
 <li><p>Competencies &amp; Academic Standards Exchange (CASE) <a href="http://www.imsglobal.org/activity/case">http://www.imsglobal.org/activity/case</a></p>
 <ul class="incremental">
@@ -211,7 +269,7 @@
 <li><p><a href="https://anchor.fm/edtechinterop/episodes/Episode-3---CASE-e3u3s2/a-aebhjb">Podcast episode about CASE</a></p></li>
 </ul>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
-<h3 data-number="2.4.2" id="opensalt"><span class="header-section-number">2.4.2</span> OpenSALT</h3>
+<h3 data-number="3.3.2" id="opensalt"><span class="header-section-number">3.3.2</span> OpenSALT</h3>
 <p>OpenSALT is a reference implementation of CASE.</p>
 <ul class="incremental">
 <li>website: <a href="https://sites.google.com/view/opensalt/home">https://sites.google.com/view/opensalt/home</a></li>
@@ -224,7 +282,7 @@
 <li>Smarter balance: <a href="https://case.smarterbalanced.org/cfdoc/">https://case.smarterbalanced.org/cfdoc/</a></li>
 </ul></li>
 </ul>
-<h2 data-number="2.5" id="other-frameworks-for-work-related-competencies"><span class="header-section-number">2.5</span> Other frameworks for work-related competencies</h2>
+<h2 data-number="3.4" id="other-frameworks-for-work-related-competencies"><span class="header-section-number">3.4</span> Other frameworks for work-related competencies</h2>
 <p>There are several other projects related to defining work-related competencies that are currently being developed:</p>
 <ul class="incremental">
 <li>The <a href="https://www.imsglobal.org/competencies/rdceov1p0/imsrdceo_infov1p0.html">IMS Reusable Definition of Competency or Educational Objective</a> is a data model that allows to specify The same schema is undergoing certification by the IEEE as the <a href="https://standards.ieee.org/standard/1484_20_1-2007.html">IEEE 1484.20.1-2007 - IEEE Standard for Learning Technology-Data Model for Reusable Competency Definitions</a>, a copy of the standards is <a href="https://web.archive.org/web/20170119031209/http://www.doleta.gov/usworkforce/pdf/2007-IEEEcomp.pdf">available here</a>. This specification does not address the aggregation of smaller competencies into larger competencies (e.g., “throws” plus “catches” equals “plays ball”) and does not address how competencies are to be assessed, certified, recorded, or used as part of a process such as instructional design or knowledge management. <!--   There is ongoing work on the specification
@@ -235,14 +293,14 @@ P1484.20.2 "Recommended Practice" --></li>
 <li><a href="http://www.cetis.org.uk/inloc/Home">Integrating Learning Outcomes and Competences (InLOC)</a> is another European effort to provide a model for the information defining both intended Learning outcomes and Work competences (LOCs). Read <a href="http://www.cetis.org.uk/inloc/Overview%2band%2bOrientation">here</a> for more info.</li>
 </ul>
 <p>The frameworks presented above are designed for work-related competencies, but the used cases for the data models being developed are similar to the use cases for curriculum standards—in both cases the goal is to establish shared identifiers that allows for interoperability between different systems.</p>
-<h1 data-number="3" id="content-metadata-standards"><span class="header-section-number">3</span> Content metadata standards</h1>
+<h1 data-number="4" id="content-metadata-standards"><span class="header-section-number">4</span> Content metadata standards</h1>
 <p>There are several standards for specifying metadata of “learning objects” which are interesting to look at in order to understand existing methods for attaching standards alignment information to content items. Alignment to standards is generally done by “tagging” content items with curriculum standard identifies (short codes or URIs).</p>
-<h2 data-number="3.1" id="learning-object-metadata-lom"><span class="header-section-number">3.1</span> Learning Object Metadata (LOM)</h2>
+<h2 data-number="4.1" id="learning-object-metadata-lom"><span class="header-section-number">4.1</span> Learning Object Metadata (LOM)</h2>
 <p>This is a standard for all metadata associated with a learning resource, including lifecycle, technical, educational, and copyright domains. The LOM standard is known as IEEE 1484.12 and as also as IMS Learning Resource Meta-data (LRM) Version 1.3. The LOM standard serves as the basis for several other standards and packaging formats.</p>
-<p><a href="Research/LOM/ieee-standard-for-learning-object-metadata.pdf" target="_blank"> <img class="paper" src="Research/LOM/ieee-standard-for-learning-object-metadata.pdf.png"> </a></p>
+<p><a href="https://cyber.sci-hub.se/MTAuMTEwOS9pZWVlc3RkLjIwMDIuOTQxMjg=/ieee-standard-for-learning-object-metadata.pdf" target="_blank"> <img class="paper" src="Research/LOM/ieee-standard-for-learning-object-metadata.pdf.png"> </a></p>
 <p>The <code>classification</code> category in the LOM standard can represent associations between learning objects and curriculum standards through the use of <code>purpose</code> and <code>taxon path</code> fields. For example, setting <code>purpose</code> to “educational level” can be used to indicate broad grade-level alignment, while <code>purpose</code> values <code>educational objective</code>, <code>competency</code>, and <code>skill level</code> can be used to indicate more specific correlations. In each case the corresponding taxon path would be set to the point to the appropriate. The standard does not specify any required format for the taxon.</p>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/LOM">Research/LON/</a> folder on github.</p>
-<h2 data-number="3.2" id="learning-resource-metadata-initiative-lrmi"><span class="header-section-number">3.2</span> Learning Resource Metadata Initiative (LRMI)</h2>
+<h2 data-number="4.2" id="learning-resource-metadata-initiative-lrmi"><span class="header-section-number">4.2</span> Learning Resource Metadata Initiative (LRMI)</h2>
 <p>The Learning Resource Metadata Initiative (LRMI) specification is a collection of classes and markup properties designed for describing educational resources. The specification is designed to be used in conjunction with the Dublin Core metadata terms.</p>
 <p>See <a href="https://www.dublincore.org/specifications/lrmi/lrmi_terms/">LRMI Metadata Terms</a> for details of the specification.</p>
 <p>The following code snippet shows an example metadata record for a lesson plan that makes use of the LRMI fields to specify the educational audience (teachers), what the resource is about (by reference to a WIKIDATA identifier), and specifies the education level with respect to Scottish Credit and Qualifications Framework (SCQF).</p>
@@ -272,23 +330,23 @@ P1484.20.2 "Recommended Practice" --></li>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="fu">}</span></span></code></pre></div>
 <p>The LRMI defines the <code>educationalAlignment</code> property which for linking resources to curriculum standards. Each standard alignment correlation can be qualified by specifying an <code>alignmentType</code> property, which has recommended (but not restricted) values: assesses, teaches, educationLevel, etc.</p>
 <p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/LRMI%20and%20DCMI">Research/LMRI and DCMI/</a> folder on github.</p>
-<h1 data-number="4" id="alignment"><span class="header-section-number">4</span> Alignment</h1>
-<h2 data-number="4.1" id="content-correlations"><span class="header-section-number">4.1</span> Content correlations</h2>
+<h1 data-number="5" id="alignment"><span class="header-section-number">5</span> Alignment</h1>
+<h2 data-number="5.1" id="content-correlations"><span class="header-section-number">5.1</span> Content correlations</h2>
 <p>The main purpose of digitizing curriculum documents is to allow educational content to be explicitly “tagged” with the curriculum standards identifiers. The links between content and curriculum standards are called “content correlations” in the literature.</p>
 <p>For more information, see the papers in the <a href="https://github.com/GROCCAD/research/tree/main/Research/ContentCorrelations">Research/ContentCorrelations/</a> folder on github.</p>
-<h2 data-number="4.2" id="standards-alignment"><span class="header-section-number">4.2</span> Standards alignment</h2>
+<h2 data-number="5.2" id="standards-alignment"><span class="header-section-number">5.2</span> Standards alignment</h2>
 <p>Assuming the existence of curriculum documents in digital form from multiple jurisdictions, the next logical step is to try to find equivalent entries in different curriculum standards. This standard-to-standard mapping is also known as a curriculum crosswalk.</p>
 <p>Obtaining a crosswalk between two curriculum standards would allow <a href="https://blog.learningequality.org/digitizing-educational-standards-for-oer-reuse-4c4d1b209a7c">content produced for the curriculum of one country to be used to another</a>.</p>
 <p>During October 2019, a hackathon co-organized by UNHCR, Learning Equality, Google.org, Vodafone Foundation, and UNESCO was held with the goal of developing tools for digitization of curriculum documents and semi-automated discovery of crosswalks between standards. You can read the results of the report below:</p>
 <p><a href="https://learningequality.org/r/hackathon-oct19-report" target="_blank"> <img class="paper" src="Research/StandardsAlignment/HACKATHON ON CURRICULUM ALIGNMENT -- 5e81cdd24.pdf.png"> </a></p>
 <p>For more information, see the papers in <a href="https://github.com/GROCCAD/research/tree/main/Research/StandardsAlignment">Research/StandardsAlignment/</a> folder on github.</p>
-<h2 data-number="4.3" id="intermediate-representations"><span class="header-section-number">4.3</span> Intermediate representations</h2>
+<h2 data-number="5.3" id="intermediate-representations"><span class="header-section-number">5.3</span> Intermediate representations</h2>
 <p>The problem with curriculum standards is that they are not universal. Far from it! Different counties, states, school boards, and even schools use different standards.</p>
 <p>The previous section touched upon some of the approach of finding standard-to-standards alignments, and content-to-standard correlations. This section we’ll discuss a different approach, which is to define common, “universal” standards that can facilitate finding standard alignments and content correlations.</p>
-<h3 data-number="4.3.1" id="compendium-of-academic-standards"><span class="header-section-number">4.3.1</span> Compendium of Academic Standards</h3>
+<h3 data-number="5.3.1" id="compendium-of-academic-standards"><span class="header-section-number">5.3.1</span> Compendium of Academic Standards</h3>
 <p>The <a href="http://www2.mcrel.org/compendium/browse.asp">McREL Compendium of Academic Standards</a> was developed by combining the information from multiple curriculum standards of the time (’90s ) and organizing all the knowledge statements in a consistent manner. Read <a href="http://www2.mcrel.org/compendium/docs/process.asp">additional details about the process</a>.</p>
 <p>The amount of work that must have gone into producing this compendium is staggering. Unfortunately, many of the standards included in the compendium are now deprecated so the McREL Compendium needs to be updated to continue to be useful.</p>
-<h3 data-number="4.3.2" id="granular-matching"><span class="header-section-number">4.3.2</span> Granular matching</h3>
+<h3 data-number="5.3.2" id="granular-matching"><span class="header-section-number">5.3.2</span> Granular matching</h3>
 <p>In <span class="citation" data-cites="kendall2003use">(Kendall 2003)</span>, the author describes the “Problem of Varying Grain Size” that occurs when trying to establish a content correlation or alignment between standards when the descriptions use a different granularity. In this case, no clearcut alignment statement can be made since only part of one standard matches the other. Such partial matches limit the usefulness of all downstream information retrieval tasks.</p>
 <p><a href="Research/StandardsAlignment/kendall2003use The Use of Metadata for the Identification and Retrieval of Resources for K–12 Education -- 739-739-1-PB.pdf" target="_blank"> <img class="paper" src="Research/StandardsAlignment/kendall2003use The Use of Metadata for the Identification and Retrieval of Resources for K–12 Education -- 739-739-1-PB.pdf.png"> </a></p>
 <p>The author proposes a solution which is to build modular standard statements that consist of a general benchmark statement which are composed of multiple independent vocabulary terms and knowledge statements. Curriculum experts who are aligning content or standards to can then choose which a specific subset of these vocabulary terms and knowledge statements when defining relations.</p>
@@ -296,7 +354,7 @@ P1484.20.2 "Recommended Practice" --></li>
 <p><img src="Research/StandardsAlignment/MatchMaker%20Intermediate%20Key.png" /></p>
 <p>This in turn allows the user to find similar standard entry in another state, something that would have been difficult to do directly, without passing through the “Intermediate Key” representation.</p>
 <p>This is a approach is very powerful, but compiling these the list of intermediate keys will be a tremendous effort requiring lots of domain expertise.</p>
-<h3 data-number="4.3.3" id="unesco-global-framework-of-reference-for-reading-and-mathematics"><span class="header-section-number">4.3.3</span> UNESCO Global Framework of Reference for Reading and Mathematics</h3>
+<h3 data-number="5.3.3" id="unesco-global-framework-of-reference-for-reading-and-mathematics"><span class="header-section-number">5.3.3</span> UNESCO Global Framework of Reference for Reading and Mathematics</h3>
 <p>There is an interesting recent effort by the UNESCO Institute for Statistics to come up with “global” curriculum standards for reading and mathematics:</p>
 <p><a href="Research/UNESCO Global Framework of Reference for Reading and Mathematics/Global-Proficiency-Framework-Oct2019.pdf" target="_blank"> <img class="paper" src="Research/UNESCO Global Framework of Reference for Reading and Mathematics/Global-Proficiency-Framework-Oct2019.pdf.png"> </a></p>
 <blockquote>
@@ -316,7 +374,7 @@ P1484.20.2 "Recommended Practice" --></li>
 </ul></li>
 <li>In the coming years, each country will have to map their local curriculum and exams to the “global” framework in order to be able to use the results of their local exams to report SDG 4.1.1 progress (see this).</li>
 </ul>
-<h1 data-number="5" id="conclusion"><span class="header-section-number">5</span> Conclusion</h1>
+<h1 data-number="6" id="conclusion"><span class="header-section-number">6</span> Conclusion</h1>
 <p>The survey of existing schemas for learning resources and curriculum standards and the associate research paints a clear picture of the difficulties associated with the task of digitizing curriculum documents. The following general observations can be made:</p>
 <ul class="incremental">
 <li>The ASN and CASE standards are structurally very similar: both standards represent the curriculum entries as a tree structure. This tree structure is well suited for math and science standards, but less suited for proficiency- and competency based curricula.</li>

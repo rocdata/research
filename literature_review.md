@@ -2,10 +2,13 @@
 title: "Literature Review on Curriculum Standards"
 ---
 
+
 **CHANGELOG**
 
+ - 2020-11-17: added representative examples from several curriculum documens
  - 2020-11-09: added links to CTDL-ASN, CaSS editor, IEEE 1484.20.1-2007, ESCO, RSD, and InLOC.
  - 2020-11-04: initial draft covering general context and ASN, CASE, LOM, LRMI.
+
 
 
 # Introduction
@@ -39,7 +42,8 @@ learning objectives, and competencies that are expected of students.
 The structure and content of curriculum standards varies widely.
 Each standard entries can have any subset of the following attributes:
 
-* **Kind / Label**: a label that describes the kind of entry (what level of the hierarchy)
+* **Path**: the position of statement within the document (e.g. Ghana > Math > B4).
+* **Kind / Label**: a label that describes the kind of entry (what level of the hierarchy).
 * **Code / Statement Notation**: a human-readable short code like [`2.MD.D.10`](http://www.corestandards.org/Math/Content/2/MD/D/10/)
 * **Identifier / URI**: a machine-readable code that identifies this curriculum standard entry (only available in standards in digital form).
 * **Description**: the full statement of the learning standard or performance expectation. This can be anywhere from a few words to a whole paragraph.
@@ -57,23 +61,157 @@ Each standard entries can have any subset of the following attributes:
   * **Practices / Core ideas / Cross-cutting concepts**: these mentions provide information about aspects of the curriculum that are not captured by the primary hierarchy of the document.
   * **Benchmarks / Rubrics**: specific criteria used to evaluate the level of attainment of the skills/competency described by the standard entry.
   * **Values / Skills**: other explicit goals of the curriculum that are not captured by any of the other categories, including non-academic goals.
+  * **Key Inquiry Questions**: central questions to organize a class on this topic.
   * **Notes**: clarifications, additional information, and non-statutory guidance.
 
 The wide variability of the structure and information contained in each standard
 poses a difficult challenge when trying to create computer representations of them.
 
-This literature review summarizes prior work done towards building data models
-for curriculum standards, which has been an active area of research for the past
-20 years.
 
 
+
+# Curriculum documents examples
+
+## Document examples
+
+The folder [`CurriculumDocs`](https://github.com/GROCCAD/research/tree/main/CurriculumDocs) contains examples
+of complete curriculum standards documents form several countries.
+
+In the next section we'll present excerpts of individual statements from each of these documents.
+
+
+## Standard statements examples
+
+In order to understand great variability of information associated with standards statements,
+we'll now look at representative excerpts of individual statements from different countries.
+
+
+### Example: Australia
+
+Australia is an excellent example of what is possible when curriculum standards are available.
+
+- Australia published [controlled vocabularies](http://vocabulary.curriculum.edu.au/) that define things like
+  audience level, curriculum elements, learning resource types, school levels, and even a controlled vocabulary of topics.
+- Published the **Australian Curriculum** standards on a well-organized website [www.australiancurriculum.edu.au](https://www.australiancurriculum.edu.au).
+   - The standards are freely available as a [PDFs](https://www.australiancurriculum.edu.au/f-10-curriculum/mathematics/pdf-documents/) or in [machine readable form](http://rdf.australiancurriculum.edu.au/).
+   - Each standard statement has associated a unique identifier.
+- They defined specific metadata and tagging schemes for describing content correlations of learning resources
+- They have a web portal with learning resources [scootle.edu.au](https://www.scootle.edu.au/ec/p/home) aligned to specific standards
+
+Notes:
+ - The Australia digital learning resources metadata efforts (MEX, SHEX) assumed a "closed system" model where all content is produced within Australia and tagged appropriately. Their [current projects](https://www.scootle.edu.au/ec/p/faq#decommOne) will rely on "open system" with publishers independently producing materials, but curriculum correlation tags will continue to play a role.
+
+
+
+### Example: Honduras mathematics
+
+The Honduras educational standards (Estándares Educativos Nacionales) are an interesting case
+because they are available in two alternative organizations: by grade level and by topic.
+
+Curriculum standards for Grade 2 Math, in the block "Números y Operaciones":
+![](CurriculumSamples/07_Honduras/Math_2__Números_y_Operaciones.png)
+
+The same statements also appear appear in the "Multiplicación" component progression across levels:
+![](CurriculumSamples/07_Honduras/Math__Números_y_Operaciones__Multiplicación_progression.png)
+
+Notes:
+ - The Honduras standards do no have unique identifiers associated with each statement, so we would need to invent them.
+   For example, the three statements in "Matemáticas > Segundo grado > Números y Operacione > Multiplicación"
+   could be tagged with `Mate.2.NO.M.1`, `Mate.2.NO.M.2`, `Mate.2.NO.M.3`.
+ - The Honduras curriculum standards are a good example of a single-hierarchy structure:
+   the subjects, blocks, components, and statements can be represented as a tree.
+
+
+
+
+
+
+### Example: Kenya Western music topics
+
+The KICD curriculum standards for Music are a good example a topic that appears repeatedly in several grade leves.
+The topic "Western music"  appears in Form One, Form Two, Form Three, and Form Four with progressively more details:
+
+<img src="CurriculumSamples/08_Kenya/KICD_Music_Form1_8_Western_music.png" style="width:24%;">
+<img src="CurriculumSamples/08_Kenya/KICD_Music_Form2_18_Western_music.png" style="width:24%;">
+<img src="CurriculumSamples/08_Kenya/KICD_Music_Form3_29_Western_music.png" style="width:24%;">
+<img src="CurriculumSamples/08_Kenya/KICD_Music_Form4_37_Western_music.png" style="width:24%;">
+
+
+
+
+
+### Example: Uganda Biology
+
+This is an example of a curriculum standard presented in table format,
+with different components presented in the columns of the table.
+
+The figure below shows the first part of the topic "Biology > Senior Three > Term I > Topic 5":
+![](CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_001.png)
+See here for [part two](CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_002.png)
+and [part three](CurriculumSamples/01_Uganda_Biology_5.1_Gaseous_exchanges/document_section_003.png) of the statement.
+
+Notes:
+ - This topic contains two subtopics "5.1 Gaseous exchanges" and "5.2 Tissue respiration"
+ - This sections within each sub-topic do not have titles—they simply correspond to different groups of specific objectives and content.
+    We have assigned identifiers (numbers shown in red) to represent these sections.
+ - This standard statement has been manually transcribed to digital form, see [here](https://docs.google.com/spreadsheets/d/1-ei7BBMOx0udbXxyLJjMPYLW0EJWg9wFUyV9ODa8m5o/edit#gid=1733263132)
+
+
+
+### Example: Kenya new CBC
+
+The new Kenya CBC (competency based curriculum) standards are very detailed and include 
+numerous components, dimensions, and cross cutting concerns, all presented in tables.
+
+Example for the math sub-strand: Mathematics > Grade 2 > 1 Numbers > 1.6 Multiplication:
+![](CurriculumSamples/08_Kenya/KICD_CBC_Mathematics_Grade2_1_Numbers_6_Multiplication.png)
+
+Another example for the English sub-strand English > Grade 4 > 5 Nutrition > 5.1 Listening and Speaking > 5.1.1 Pronunciation and vocabulary:
+![](CurriculumSamples/08_Kenya/KICD_CBC_English_Grade4_5_Nutrition_5.1_Listening.png)
+
+
+Notes:
+ - Note the number of different elements specified in the standard (time allocation, specific learning outcomes, suggested learning experiences, key questions, core competencies, learning areas links, etc.)
+ - Creating a faithful and complete digital representation of all the information in this table will be a significant challenge:
+   we would either need a very flexible/extensible data model or have to represent only part of the information.
+
+
+### Example: Ghana
+
+The Ghanian curriculum standards are available as [PDFs from the NaCCA website](https://nacca.gov.gh/?page_id=9230). 
+Each statements in the Ghanian curriculum standards has an identifier of the form `Bx.y.z.v.w`,
+where `x` is the grade level,
+`y` is the strand number,
+`z` is the sub-strand number,
+`v` is standard number,
+and `w` is learning indicator number.
+The same structure is used in all subjects, so we'll only show two representative examples.
+
+
+English example `B4.2.6.2`:
+![](CurriculumSamples/06_Ghana/English_B4.2.6.2_Build_vocabulary.png)
+
+Math example `B4.1.5.1`:
+![](CurriculumSamples/06_Ghana/Math_B4.1.5.1_001.png)
+
+The folder [`CurriculumSamples/06_Ghana`](https://github.com/GROCCAD/research/tree/main/CurriculumSamples/06_Ghana) contains additional examples.
+
+Notes:
+ - The Ghanian curriculum standards contain a lot of useful examples, which would be important to capture as part of the digitization process.
+ - The examples contain math equations, images, and illustrations.
+
+
+ 
 
 # Schemas for curriculum standards 
+
+We'll now summarize some prior work done towards building data models for
+curriculum standards, which has been an active area of research for the past 20 years.
 
 There are three notable prior efforts to produce a schema for digital curriculum documents:
 
 * Achievement Standards Network (ASN)
-* 
+* Credential Transparency Description Language (CTDL-ASN)
 * Competencies & Academic Standards Exchange (CASE) 
 
 We'll provide detailed notes for each standard and related research below.
@@ -118,8 +256,7 @@ summary for the research and design that went into designing the ASN:
 </p>
 
 
-
-## Notes
+### Notes
 
 The ASN framework specifies the following types of relations that can exist between
 two standard statements:
@@ -156,8 +293,7 @@ The CTDL-ASN schema has an active ecosystem of tools and services around it:
 
  - [CaSS Editor](https://github.com/cassproject/cass-editor): a web application
    for editing competency frameworks and building crosswalk between them.
-   The CaSS supports importing competency frameworks from ASN and CASE data formats,
-   as well as upload through semi-structured formats like text, CSV, etc.
+   See notes and screenshots below.
  - [Credential Engine Registry](https://credentialengine.org/about/credential-registry-overview/):
    an API and registration portal that allows organizations to publish the
    competency frameworks.
@@ -167,6 +303,36 @@ The CTDL-ASN schema has an active ecosystem of tools and services around it:
 For more information see the [Credential Engine Technical Site](https://credreg.net/),
 the [CTDL Handbook](https://credreg.net/ctdl/handbook),
 and the [Research/CTDL-ASN/](https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN) folder on github.
+
+
+
+### CaSS Editor
+
+The [CaSS editor](https://github.com/cassproject/cass-editor) is an web application for importing,
+creating, editing, and exporting competency frameworks developed by [EduWorks](https://eduworks.com).
+The CaSS editor is open source and used as the new [Credential Engine](https://credentialengine.org/) competency manager.
+
+The CaSS supports importing competency frameworks from CASE schema, and a number of other
+structured formats as CSV, JSON-LD, etc.
+
+The screenshot below shows the browsing interface for frameworks,
+which you can see for yourself [here](https://cassproject.github.io/cass-editor/#/).
+![](Research/SaCC/CaSS-framework-browser.png)
+
+The browsing interface allows three levels of metadata details: primary, secondary, and tertiary.
+Each competency can be associated with one of the properties within the CaSS schema:
+![](Research/SaCC/CaSS-properties.png)
+
+The set of available and required properties in the CaSS editor is controlled by a
+[configuraiton](https://cassproject.github.io/cass-editor/#/configuration).
+
+The CaSS editor can be used to create crosswalks between frameworks through two-column interface:
+![](Research/SaCC/CaSS-crosswalk-editing.png)
+
+
+Frameworks can be exported as ASN (RDF), CTDL-ASN (JSON), CSV, and CASE formats:
+
+<img src="Research/SaCC/exporters/exportable-framework-formats.png" style="width:400px">
 
 
 
@@ -266,7 +432,7 @@ lifecycle, technical, educational, and copyright domains. The LOM standard is kn
 and as also as IMS Learning Resource Meta-data (LRM) Version 1.3.
 The LOM standard serves as the basis for several other standards and packaging formats.
 
-<a href="Research/LOM/ieee-standard-for-learning-object-metadata.pdf" target="_blank">
+<a href="https://cyber.sci-hub.se/MTAuMTEwOS9pZWVlc3RkLjIwMDIuOTQxMjg=/ieee-standard-for-learning-object-metadata.pdf" target="_blank">
 <img class="paper" src="Research/LOM/ieee-standard-for-learning-object-metadata.pdf.png">
 </a>
 
