@@ -6,5 +6,5 @@ The standards for all subject can be downloaded from
 are © National Council for Curriculum and Assessment (NaCCA), Ministry of Education Ghana.
 
 A local cache of the documents is avaiable here:
-https://github.com/GROCCAD/standards-ghana/tree/main/sourcedocuments
+https://github.com/rocdata/standards-ghana/tree/main/sourcedocuments
 

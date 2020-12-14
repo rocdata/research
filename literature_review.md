@@ -74,7 +74,7 @@ poses a difficult challenge when trying to create computer representations of th
 
 ## Document examples
 
-The folder [`CurriculumDocs`](https://github.com/GROCCAD/research/tree/main/CurriculumDocs) contains examples
+The folder [`CurriculumDocs`](https://github.com/rocdata/research/tree/main/CurriculumDocs) contains examples
 of complete curriculum standards documents form several countries.
 
 In the next section we'll present excerpts of individual statements from each of these documents.
@@ -194,7 +194,7 @@ English example `B4.2.6.2`:
 Math example `B4.1.5.1`:
 ![](CurriculumSamples/06_Ghana/Math_B4.1.5.1_001.png)
 
-The folder [`CurriculumSamples/06_Ghana`](https://github.com/GROCCAD/research/tree/main/CurriculumSamples/06_Ghana) contains additional examples.
+The folder [`CurriculumSamples/06_Ghana`](https://github.com/rocdata/research/tree/main/CurriculumSamples/06_Ghana) contains additional examples.
 
 Notes:
  - The Ghanian curriculum standards contain a lot of useful examples, which would be important to capture as part of the digitization process.
@@ -277,7 +277,7 @@ The terminology broad/narrow is inspired from the SKOS concepts of
 and [narrowMatch](https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch).
 
 
-For more information, see the [Research/ASN/](https://github.com/GROCCAD/research/tree/main/Research/ASN) folder on github.
+For more information, see the [Research/ASN/](https://github.com/rocdata/research/tree/main/Research/ASN) folder on github.
 
 
 
@@ -302,7 +302,7 @@ The CTDL-ASN schema has an active ecosystem of tools and services around it:
 
 For more information see the [Credential Engine Technical Site](https://credreg.net/),
 the [CTDL Handbook](https://credreg.net/ctdl/handbook),
-and the [Research/CTDL-ASN/](https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN) folder on github.
+and the [Research/CTDL-ASN/](https://github.com/rocdata/research/tree/main/Research/CTDL-ASN) folder on github.
 
 
 
@@ -362,7 +362,7 @@ CASE adoption mainly by US states: Texas, Georgia, LearningMate(South Carolina),
 * [Podcast episode about CASE](https://anchor.fm/edtechinterop/episodes/Episode-3---CASE-e3u3s2/a-aebhjb)
  
 
-For more information, see the [Research/ASN/](https://github.com/GROCCAD/research/tree/main/Research/ASN) folder on github.
+For more information, see the [Research/ASN/](https://github.com/rocdata/research/tree/main/Research/ASN) folder on github.
 
 
 ### OpenSALT
@@ -438,7 +438,7 @@ The LOM standard serves as the basis for several other standards and packaging f
 
 The `classification` category in the LOM standard can represent associations between learning objects and curriculum standards through the use of `purpose` and `taxon path` fields. For example, setting `purpose` to "educational level" can be used to indicate broad grade-level alignment, while `purpose` values `educational objective`, `competency`, and `skill level` can be used to indicate more specific correlations. In each case the corresponding taxon path would be set to the point to the appropriate. The standard does not specify any required format for the taxon.
 
-For more information, see the [Research/LON/](https://github.com/GROCCAD/research/tree/main/Research/LOM) folder on github.
+For more information, see the [Research/LON/](https://github.com/rocdata/research/tree/main/Research/LOM) folder on github.
 
 
 ## Learning Resource Metadata Initiative (LRMI)
@@ -487,7 +487,7 @@ to curriculum standards. Each standard alignment correlation can be qualified by
 specifying an `alignmentType` property, which has recommended (but not restricted)
 values: assesses, teaches, educationLevel, etc.
 
-For more information, see the [Research/LMRI and DCMI/](https://github.com/GROCCAD/research/tree/main/Research/LRMI%20and%20DCMI) folder on github.
+For more information, see the [Research/LMRI and DCMI/](https://github.com/rocdata/research/tree/main/Research/LRMI%20and%20DCMI) folder on github.
 
 
 
@@ -503,7 +503,7 @@ The links between content and curriculum standards are called "content correlati
 in the literature.
 
 
-For more information, see the papers in the [Research/ContentCorrelations/](https://github.com/GROCCAD/research/tree/main/Research/ContentCorrelations) folder on github.
+For more information, see the papers in the [Research/ContentCorrelations/](https://github.com/rocdata/research/tree/main/Research/ContentCorrelations) folder on github.
 
 
 
@@ -527,7 +527,7 @@ between standards. You can read the results of the report below:
 </a>
 
 
-For more information, see the papers in [Research/StandardsAlignment/](https://github.com/GROCCAD/research/tree/main/Research/StandardsAlignment) folder on github.
+For more information, see the papers in [Research/StandardsAlignment/](https://github.com/rocdata/research/tree/main/Research/StandardsAlignment) folder on github.
 
 
 

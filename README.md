@@ -9,9 +9,9 @@ research for the past 20 years. Let's see what people have come up with with so 
 
 ### Research
 
- - [`literature_review.md`](https://groccad.github.io/research/literature_review.html):
+ - [`literature_review.md`](https://rocdata.github.io/research/literature_review.html):
    a guided tour of the most notable papers in `Research/`
- - [`Research/`](https://github.com/GROCCAD/research/tree/main/Research):
+ - [`Research/`](https://github.com/rocdata/research/tree/main/Research):
    collected papers, screenshots, presentations, and links to various projects 
  
 

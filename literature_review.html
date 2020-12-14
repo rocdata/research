@@ -159,7 +159,7 @@
 <p>The wide variability of the structure and information contained in each standard poses a difficult challenge when trying to create computer representations of them.</p>
 <h1 data-number="2" id="curriculum-documents-examples"><span class="header-section-number">2</span> Curriculum documents examples</h1>
 <h2 data-number="2.1" id="document-examples"><span class="header-section-number">2.1</span> Document examples</h2>
-<p>The folder <a href="https://github.com/GROCCAD/research/tree/main/CurriculumDocs"><code>CurriculumDocs</code></a> contains examples of complete curriculum standards documents form several countries.</p>
+<p>The folder <a href="https://github.com/rocdata/research/tree/main/CurriculumDocs"><code>CurriculumDocs</code></a> contains examples of complete curriculum standards documents form several countries.</p>
 <p>In the next section we’ll present excerpts of individual statements from each of these documents.</p>
 <h2 data-number="2.2" id="standard-statements-examples"><span class="header-section-number">2.2</span> Standard statements examples</h2>
 <p>In order to understand great variability of information associated with standards statements, we’ll now look at representative excerpts of individual statements from different countries.</p>
@@ -197,7 +197,7 @@
 <p>The Ghanian curriculum standards are available as <a href="https://nacca.gov.gh/?page_id=9230">PDFs from the NaCCA website</a>. Each statements in the Ghanian curriculum standards has an identifier of the form <code>Bx.y.z.v.w</code>, where <code>x</code> is the grade level, <code>y</code> is the strand number, <code>z</code> is the sub-strand number, <code>v</code> is standard number, and <code>w</code> is learning indicator number. The same structure is used in all subjects, so we’ll only show two representative examples.</p>
 <p>English example <code>B4.2.6.2</code>: <img src="CurriculumSamples/06_Ghana/English_B4.2.6.2_Build_vocabulary.png" /></p>
 <p>Math example <code>B4.1.5.1</code>: <img src="CurriculumSamples/06_Ghana/Math_B4.1.5.1_001.png" /></p>
-<p>The folder <a href="https://github.com/GROCCAD/research/tree/main/CurriculumSamples/06_Ghana"><code>CurriculumSamples/06_Ghana</code></a> contains additional examples.</p>
+<p>The folder <a href="https://github.com/rocdata/research/tree/main/CurriculumSamples/06_Ghana"><code>CurriculumSamples/06_Ghana</code></a> contains additional examples.</p>
 <p>Notes: - The Ghanian curriculum standards contain a lot of useful examples, which would be important to capture as part of the digitization process. - The examples contain math equations, images, and illustrations.</p>
 <h1 data-number="3" id="schemas-for-curriculum-standards"><span class="header-section-number">3</span> Schemas for curriculum standards</h1>
 <p>We’ll now summarize some prior work done towards building data models for curriculum standards, which has been an active area of research for the past 20 years.</p>
@@ -228,7 +228,7 @@
 <p><img src="Research/ASN/levels_of_alignment.png" /></p>
 <p>Similar to the above, the ASN framework specifies the following types of relations that can exist between a learning resource and a standard node: <code>exactCorrelation</code>, <code>narrowCorrelation</code>, <code>broadCorrelation</code>, <code>minorCorrelation</code>, <code>majorCorrelation</code>, etc.</p>
 <p>The terminology broad/narrow is inspired from the SKOS concepts of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch">broadMatch</a> and <a href="https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch">narrowMatch</a>.</p>
-<p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
+<p>For more information, see the <a href="https://github.com/rocdata/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
 <h2 data-number="3.2" id="credential-transparency-description-language"><span class="header-section-number">3.2</span> Credential Transparency Description Language</h2>
 <p>The <a href="https://credreg.net/ctdlasn/terms/">Credential Transparency Description Language (CTDL-ASN)</a> schema is based on the ASN, but uses the terminology of “competencies” and “frameworks” instead of “statements” and “documents.” This schema is developed by <a href="https://credentialengine.org/">Credential Engine</a> and used by employers, accreditation agencies, and educational institutions to edit, publish, and find work-related competencies.</p>
 <p>The CTDL-ASN schema has an active ecosystem of tools and services around it:</p>
@@ -237,7 +237,7 @@
 <li><a href="https://credentialengine.org/about/credential-registry-overview/">Credential Engine Registry</a>: an API and registration portal that allows organizations to publish the competency frameworks.</li>
 <li><a href="https://credentialfinder.org/">Credentials Finder</a>: a service to lookup and browse all the frameworks published to the Credential Engine Registry.</li>
 </ul>
-<p>For more information see the <a href="https://credreg.net/">Credential Engine Technical Site</a>, the <a href="https://credreg.net/ctdl/handbook">CTDL Handbook</a>, and the <a href="https://github.com/GROCCAD/research/tree/main/Research/CTDL-ASN">Research/CTDL-ASN/</a> folder on github.</p>
+<p>For more information see the <a href="https://credreg.net/">Credential Engine Technical Site</a>, the <a href="https://credreg.net/ctdl/handbook">CTDL Handbook</a>, and the <a href="https://github.com/rocdata/research/tree/main/Research/CTDL-ASN">Research/CTDL-ASN/</a> folder on github.</p>
 <h3 data-number="3.2.1" id="cass-editor"><span class="header-section-number">3.2.1</span> CaSS Editor</h3>
 <p>The <a href="https://github.com/cassproject/cass-editor">CaSS editor</a> is an web application for importing, creating, editing, and exporting competency frameworks developed by <a href="https://eduworks.com">EduWorks</a>. The CaSS editor is open source and used as the new <a href="https://credentialengine.org/">Credential Engine</a> competency manager.</p>
 <p>The CaSS supports importing competency frameworks from CASE schema, and a number of other structured formats as CSV, JSON-LD, etc.</p>
@@ -268,7 +268,7 @@
 <li><p><a href="https://medium.com/@brandon.dorman/case-as-the-aws-of-education-3b96a1664c6e">A blog post that explains the need for CASE + OpenSALT</a></p></li>
 <li><p><a href="https://anchor.fm/edtechinterop/episodes/Episode-3---CASE-e3u3s2/a-aebhjb">Podcast episode about CASE</a></p></li>
 </ul>
-<p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
+<p>For more information, see the <a href="https://github.com/rocdata/research/tree/main/Research/ASN">Research/ASN/</a> folder on github.</p>
 <h3 data-number="3.3.2" id="opensalt"><span class="header-section-number">3.3.2</span> OpenSALT</h3>
 <p>OpenSALT is a reference implementation of CASE.</p>
 <ul class="incremental">
@@ -299,7 +299,7 @@ P1484.20.2 "Recommended Practice" --></li>
 <p>This is a standard for all metadata associated with a learning resource, including lifecycle, technical, educational, and copyright domains. The LOM standard is known as IEEE 1484.12 and as also as IMS Learning Resource Meta-data (LRM) Version 1.3. The LOM standard serves as the basis for several other standards and packaging formats.</p>
 <p><a href="https://cyber.sci-hub.se/MTAuMTEwOS9pZWVlc3RkLjIwMDIuOTQxMjg=/ieee-standard-for-learning-object-metadata.pdf" target="_blank"> <img class="paper" src="Research/LOM/ieee-standard-for-learning-object-metadata.pdf.png"> </a></p>
 <p>The <code>classification</code> category in the LOM standard can represent associations between learning objects and curriculum standards through the use of <code>purpose</code> and <code>taxon path</code> fields. For example, setting <code>purpose</code> to “educational level” can be used to indicate broad grade-level alignment, while <code>purpose</code> values <code>educational objective</code>, <code>competency</code>, and <code>skill level</code> can be used to indicate more specific correlations. In each case the corresponding taxon path would be set to the point to the appropriate. The standard does not specify any required format for the taxon.</p>
-<p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/LOM">Research/LON/</a> folder on github.</p>
+<p>For more information, see the <a href="https://github.com/rocdata/research/tree/main/Research/LOM">Research/LON/</a> folder on github.</p>
 <h2 data-number="4.2" id="learning-resource-metadata-initiative-lrmi"><span class="header-section-number">4.2</span> Learning Resource Metadata Initiative (LRMI)</h2>
 <p>The Learning Resource Metadata Initiative (LRMI) specification is a collection of classes and markup properties designed for describing educational resources. The specification is designed to be used in conjunction with the Dublin Core metadata terms.</p>
 <p>See <a href="https://www.dublincore.org/specifications/lrmi/lrmi_terms/">LRMI Metadata Terms</a> for details of the specification.</p>
@@ -329,17 +329,17 @@ P1484.20.2 "Recommended Practice" --></li>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>  <span class="fu">}</span></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="fu">}</span></span></code></pre></div>
 <p>The LRMI defines the <code>educationalAlignment</code> property which for linking resources to curriculum standards. Each standard alignment correlation can be qualified by specifying an <code>alignmentType</code> property, which has recommended (but not restricted) values: assesses, teaches, educationLevel, etc.</p>
-<p>For more information, see the <a href="https://github.com/GROCCAD/research/tree/main/Research/LRMI%20and%20DCMI">Research/LMRI and DCMI/</a> folder on github.</p>
+<p>For more information, see the <a href="https://github.com/rocdata/research/tree/main/Research/LRMI%20and%20DCMI">Research/LMRI and DCMI/</a> folder on github.</p>
 <h1 data-number="5" id="alignment"><span class="header-section-number">5</span> Alignment</h1>
 <h2 data-number="5.1" id="content-correlations"><span class="header-section-number">5.1</span> Content correlations</h2>
 <p>The main purpose of digitizing curriculum documents is to allow educational content to be explicitly “tagged” with the curriculum standards identifiers. The links between content and curriculum standards are called “content correlations” in the literature.</p>
-<p>For more information, see the papers in the <a href="https://github.com/GROCCAD/research/tree/main/Research/ContentCorrelations">Research/ContentCorrelations/</a> folder on github.</p>
+<p>For more information, see the papers in the <a href="https://github.com/rocdata/research/tree/main/Research/ContentCorrelations">Research/ContentCorrelations/</a> folder on github.</p>
 <h2 data-number="5.2" id="standards-alignment"><span class="header-section-number">5.2</span> Standards alignment</h2>
 <p>Assuming the existence of curriculum documents in digital form from multiple jurisdictions, the next logical step is to try to find equivalent entries in different curriculum standards. This standard-to-standard mapping is also known as a curriculum crosswalk.</p>
 <p>Obtaining a crosswalk between two curriculum standards would allow <a href="https://blog.learningequality.org/digitizing-educational-standards-for-oer-reuse-4c4d1b209a7c">content produced for the curriculum of one country to be used to another</a>.</p>
 <p>During October 2019, a hackathon co-organized by UNHCR, Learning Equality, Google.org, Vodafone Foundation, and UNESCO was held with the goal of developing tools for digitization of curriculum documents and semi-automated discovery of crosswalks between standards. You can read the results of the report below:</p>
 <p><a href="https://learningequality.org/r/hackathon-oct19-report" target="_blank"> <img class="paper" src="Research/StandardsAlignment/HACKATHON ON CURRICULUM ALIGNMENT -- 5e81cdd24.pdf.png"> </a></p>
-<p>For more information, see the papers in <a href="https://github.com/GROCCAD/research/tree/main/Research/StandardsAlignment">Research/StandardsAlignment/</a> folder on github.</p>
+<p>For more information, see the papers in <a href="https://github.com/rocdata/research/tree/main/Research/StandardsAlignment">Research/StandardsAlignment/</a> folder on github.</p>
 <h2 data-number="5.3" id="intermediate-representations"><span class="header-section-number">5.3</span> Intermediate representations</h2>
 <p>The problem with curriculum standards is that they are not universal. Far from it! Different counties, states, school boards, and even schools use different standards.</p>
 <p>The previous section touched upon some of the approach of finding standard-to-standards alignments, and content-to-standard correlations. This section we’ll discuss a different approach, which is to define common, “universal” standards that can facilitate finding standard alignments and content correlations.</p>
